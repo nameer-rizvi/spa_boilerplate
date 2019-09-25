@@ -1,0 +1,35 @@
+{
+  "name": "ssr_boilerplate",
+  "version": "1.0.0",
+  "description": "Express app serving react via webpack.",
+  "main": "/src/server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd src/config && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nameer-rizvi/ssr_boilerplate.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "react",
+    "webpack",
+    "babel",
+    "ssr"
+  ],
+  "author": "Nameer Rizvi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nameer-rizvi/ssr_boilerplate/issues"
+  },
+  "homepage": "https://github.com/nameer-rizvi/ssr_boilerplate#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
