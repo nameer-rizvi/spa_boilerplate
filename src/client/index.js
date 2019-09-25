@@ -1,20 +1,15 @@
-import Icon from "./webpack.png";
-import Data from "./data.xml";
-
-import "./style.scss";
+import printMe from "./print.js";
 
 function component() {
   const element = document.createElement("div");
+  const btn = document.createElement("button");
 
   element.innerHTML = "Hello webpack.";
-  element.classList.add("hello");
 
-  const myIcon = new Image();
-  myIcon.src = Icon;
+  btn.innerHTML = "Click me and check the console!";
+  btn.onclick = printMe;
 
-  element.appendChild(myIcon);
-
-  console.log(Data);
+  element.appendChild(btn);
 
   return element;
 }

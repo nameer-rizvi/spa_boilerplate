@@ -1,0 +1,3 @@
+// RULE: "ANYTHING" THAT IS USED IN MORE THAN ONE FILE GOES HERE.
+
+module.exports = {};
