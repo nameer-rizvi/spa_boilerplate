@@ -1,23 +1,18 @@
 import "babel-polyfill";
-import "./style.scss";
+
+import React from "react";
+import { hydrate } from "react-dom";
+
+import App from "./app";
 
 import { checkServiceWorker } from "./checkServiceWorker";
 
 checkServiceWorker();
 
-function component() {
-  const element = document.createElement("div");
-  const btn = document.createElement("button");
+const element = document.createElement("div");
+element.id = "root";
+element.innerHTML = "id should be root";
 
-  element.innerHTML = "Hello webpack 4.";
+document.body.appendChild(element);
 
-  btn.innerHTML = "Click me and check the console!";
-  btn.onclick = () => console.log("Help! I've been Clicked!");
-
-  element.appendChild(btn);
-  element.classList.add("hello");
-
-  return element;
-}
-
-document.body.appendChild(component());
+hydrate(<App />, document.getElementById("root"));
