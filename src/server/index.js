@@ -17,8 +17,8 @@ app.listen(port, () => {
 });
 
 const api = require("./api");
-const production = require("./ssr/production");
-const development = require("./ssr/development");
+const ssr_production = require("./ssr/production");
+const ssr_development = require("./ssr/development");
 
 app.use("/api", api);
-app.use(env === "production" ? production : development);
+app.use(env === "production" ? ssr_production : ssr_development);

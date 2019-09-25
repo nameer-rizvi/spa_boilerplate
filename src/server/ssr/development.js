@@ -4,7 +4,7 @@ const router = express.Router();
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 
-const config = require("../../config/webpack.config.js");
+const config = require("../../config/webpack.dev.js");
 const compiler = webpack(config);
 
 router.use(

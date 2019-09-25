@@ -1,23 +1,40 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const config = require("./app")["webpack"];
+const config = require("./app/index")["webpack"];
 const path = config["path"];
+const env = process.env.NODE_ENV === "production";
 
 module.exports = {
-  mode: "development",
   entry: {
     app: path.toClient("/index.js")
   },
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: path.toDist()
-  },
-  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(config["html"])],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin(config["html"]),
+    new MiniCssExtractPlugin({
+      filename: "[name].css"
+    })
+  ],
   output: {
-    filename: "[name].bundle.js",
+    filename: env ? "[name].[contenthash].js" : "[name].bundle.js",
     path: path.toDist()
     // publicPath: "/"
+  },
+  optimization: {
+    moduleIds: "hashed",
+    runtimeChunk: "single",
+    splitChunks: {
+      // chunks: "all",
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all"
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -32,11 +49,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: env
+          ? [MiniCssExtractPlugin.loader, "css-loader"]
+          : ["style-loader", "css-loader"]
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: env
+          ? [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+          : ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
