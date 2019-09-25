@@ -4,15 +4,23 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const html = require("./html");
 
+const path_dist = "../dist";
+const path_client = "../client";
+
 module.exports = {
+  mode: "development",
   entry: {
-    app: "../client/index.js",
-    print: "../client/print.js"
+    app: `${path_client}/index.js`,
+    print: `${path_client}/print.js`
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: path_dist
   },
   plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(html)],
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "../dist")
+    path: path.resolve(__dirname, path_dist)
   },
   module: {
     rules: [

@@ -8,9 +8,17 @@ This app was built following the instructions from [webpack's official guides](h
 
 ## scripts
 
-bundle client folder into /src/dist with an index.html.
+bundle /client into /dist with an index.html.
 
 `npm run build`
+
+webpack watch mode for changes in /client.
+
+`npm run watch`
+
+webpack server mode for hot-reload on changes in /client.
+
+`npm start`
 
 ## supported file formats for asset bundling
 
