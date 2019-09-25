@@ -24,15 +24,15 @@ webpack server mode for hot-reload on changes in /client.
 
 start express server using node and either serve:
 
-- (a) /client via webpack middleware in development/local, or
-- (b) /dist via index.html in production.
+- /client via webpack middleware in development/local, or
+- /dist via index.html in production.
 
 `npm run server-watch`
 
 start and watch express server using nodemon and either serve:
 
-- (a) /client via webpack middleware in development/local, or
-- (b) /dist via index.html in production.
+- /client via webpack middleware in development/local, or
+- /dist via index.html in production.
 
 ## supported file formats for asset bundling
 
