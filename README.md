@@ -4,7 +4,7 @@ Express app serving react via webpack.
 
 ## conception
 
-This app was built following the instructions from [webpack's official guides](https://webpack.js.org/guides/) as well as a personal preference for folder structure.
+This app was built following instructions from [webpack's official guides](https://webpack.js.org/guides/) as well as a personal preference for folder structure.
 
 The chapters most thoroughly covered in this version are:
 
@@ -21,29 +21,29 @@ The chapters most thoroughly covered in this version are:
 
 `npm run build`
 
-bundle /client into /dist with an index.html, using webpack.prod.config.
+bundle /client into /dist with an index.html.
 
 `npm run watch`
 
-webpack watch mode for changes in /client, using webpack.dev.config.
+webpack watch mode for changes in /client.
 
 `npm start`
 
-webpack server mode for hot-reload on changes in /client, using webpack.prod.config.
+webpack server mode for hot-reload on changes in /client.
 
 `npm run server-static`
 
 start express server using node and either serve:
 
-- /client via webpack middleware in development/local, or
-- /dist via index.html in production.
+- /client via webpack middleware, or
+- /dist via index.html.
 
 `npm run server-watch`
 
 start and watch express server using nodemon and either serve:
 
-- /client via webpack middleware in development/local, or
-- /dist via index.html in production.
+- /client via webpack middleware, or
+- /dist via index.html.
 
 `npm run server-http`
 
