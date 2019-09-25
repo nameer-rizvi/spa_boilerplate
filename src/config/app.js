@@ -1,3 +1,17 @@
-// RULE: "ANYTHING" THAT IS USED IN MORE THAN ONE FILE GOES HERE.
+// RULE: "ANYTHING" REQUIRED IN MORE THAN ONE FILE,
+// OR IS A CONSTANT CONFIGUARATION SETTING GOES HERE.
 
-module.exports = {};
+const path = require("path");
+const html = require("./html");
+
+const pathResolve = dir => path.resolve(__dirname, dir);
+
+module.exports = {
+  webpack: {
+    html: html,
+    path: {
+      toDist: ext => pathResolve(`../dist${ext ? `/${ext}` : ""}`),
+      toClient: ext => pathResolve(`../client${ext ? `/${ext}` : ""}`)
+    }
+  }
+};

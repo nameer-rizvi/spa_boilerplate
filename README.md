@@ -20,6 +20,20 @@ webpack server mode for hot-reload on changes in /client.
 
 `npm start`
 
+start express server using node and either serve:
+
+- (a) /client via webpack middleware, or
+- (b) /dist via index.html.
+
+`npm run server-static`
+
+start and watch express server using nodemon and either serve:
+
+- (a) /client via webpack middleware, or
+- (b) /dist via index.html.
+
+`npm run server-watch`
+
 ## supported file formats for asset bundling
 
 - javascript: js, jsx

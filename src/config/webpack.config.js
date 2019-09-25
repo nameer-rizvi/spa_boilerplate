@@ -1,29 +1,35 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const html = require("./html");
-
-const path_dist = "../dist";
-const path_client = "../client";
+const config = require("./app")["webpack"];
+const path = config["path"];
 
 module.exports = {
   mode: "development",
   entry: {
-    app: `${path_client}/index.js`,
-    print: `${path_client}/print.js`
+    app: path.toClient("/index.js")
   },
   devtool: "inline-source-map",
   devServer: {
-    contentBase: path_dist
+    contentBase: path.toDist()
   },
-  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(html)],
+  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(config["html"])],
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, path_dist)
+    path: path.toDist()
+    // publicPath: "/"
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"]
+          }
+        }
+      },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
