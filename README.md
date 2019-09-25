@@ -6,6 +6,17 @@ Express app serving react via webpack.
 
 This app was built following the instructions from [webpack's official guides](https://webpack.js.org/guides/) as well as a personal preference for folder structure.
 
+The steps most thoroughly covered were:
+
+1. Getting Started
+2. Asset Management
+3. Output Management
+4. Development
+5. Production
+6. Progressive Web Application
+
+This app is essentially the 'bare bones' required to build a production-ready app.
+
 ## scripts
 
 `npm run build`
