@@ -8,31 +8,31 @@ This app was built following the instructions from [webpack's official guides](h
 
 ## scripts
 
-bundle /client into /dist with an index.html.
-
 `npm run build`
 
-webpack watch mode for changes in /client.
+bundle /client into /dist with an index.html.
 
 `npm run watch`
 
-webpack server mode for hot-reload on changes in /client.
+webpack watch mode for changes in /client.
 
 `npm start`
+
+webpack server mode for hot-reload on changes in /client.
+
+`npm run server-static`
 
 start express server using node and either serve:
 
 - (a) /client via webpack middleware in development/local, or
 - (b) /dist via index.html in production.
 
-`npm run server-static`
+`npm run server-watch`
 
 start and watch express server using nodemon and either serve:
 
 - (a) /client via webpack middleware in development/local, or
 - (b) /dist via index.html in production.
-
-`npm run server-watch`
 
 ## supported file formats for asset bundling
 
