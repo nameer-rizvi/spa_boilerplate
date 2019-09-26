@@ -20,7 +20,6 @@ module.exports = {
   output: {
     filename: env ? "[name].[contenthash].js" : "[name].bundle.js",
     path: path.toDist()
-    // publicPath: "/"
   },
   optimization: {
     moduleIds: "hashed",

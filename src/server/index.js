@@ -18,7 +18,8 @@ app.listen(port, () => {
 
 const api = require("./api");
 const ssr_production = require("./ssr/production");
-const ssr_development = require("./ssr/development");
+const ssr_development = console.log("howdy doo!");
+// const ssr_development = require("./ssr/development");
 
 app.use("/api", api);
 app.use(env === "production" ? ssr_production : ssr_development);

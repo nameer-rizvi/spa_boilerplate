@@ -12,7 +12,8 @@ module.exports = {
     html: html,
     path: {
       toDist: ext => pathResolve(`../../dist${ext ? `/${ext}` : ""}`),
-      toClient: ext => pathResolve(`../../client${ext ? `/${ext}` : ""}`)
+      toClient: ext => pathResolve(`../../client${ext ? `/${ext}` : ""}`),
+      toHtml: () => pathResolve("../../dist/index.html")
     }
   }
 };

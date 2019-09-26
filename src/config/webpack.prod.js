@@ -11,5 +11,8 @@ module.exports = merge(common, {
       clientsClaim: true,
       skipWaiting: true
     })
-  ]
+  ],
+  output: {
+    publicPath: "/"
+  }
 });
