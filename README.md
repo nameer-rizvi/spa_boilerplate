@@ -35,15 +35,15 @@ webpack server mode for hot-reload on changes in /client.
 
 start express server using node and either serve:
 
-- /client via webpack middleware, or
-- /dist via index.html.
+- /client via webpack middleware[development/local], or
+- /dist via index.html [production].
 
 `npm run server-watch`
 
 start and watch express server using nodemon and either serve:
 
-- /client via webpack middleware, or
-- /dist via index.html.
+- /client via webpack middleware [development/local], or
+- /dist via index.html [production].
 
 `npm run server-http`
 
