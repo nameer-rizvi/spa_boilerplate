@@ -2,8 +2,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const config = require("./app/index")["webpack"];
+const config = require("../app/index");
 const path = config["path"];
+const html = require("./html");
 const env = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(config["html"]),
+    new HtmlWebpackPlugin(html),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     })

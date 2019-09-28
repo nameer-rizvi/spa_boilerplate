@@ -17,7 +17,7 @@ The chapters most thoroughly covered in this version are:
 
 ...essentially, the 'bare bones' required to build a production-ready app.
 
-## scripts
+## npm scripts
 
 `npm run build`
 
@@ -35,7 +35,7 @@ webpack server mode for hot-reload on changes in /client.
 
 start express server using node and either serve:
 
-- /client via webpack middleware[development/local], or
+- /client via webpack middleware [development/local], or
 - /dist via index.html [production].
 
 `npm run server-watch`

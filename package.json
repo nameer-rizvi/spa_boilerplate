@@ -5,9 +5,9 @@
   "main": "/src/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "cd src/config && webpack --watch --config webpack.dev.js",
-    "start": "cd src/config && webpack-dev-server --open --config webpack.dev.js",
-    "build": "cd src/config && webpack --config webpack.prod.js",
+    "watch": "cd src/config/webpack && webpack --watch --config dev.js",
+    "start": "cd src/config/webpack && webpack-dev-server --open --config dev.js",
+    "build": "cd src/config/webpack && webpack --config prod.js",
     "server-static": "node src/server/index.js",
     "server-watch": "nodemon src/server/index.js",
     "server-http": "http-server src/dist"
