@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV;
 const express = require("express");
-const path = require("../config/app/index")["path"];
+const path = require("../config/index")["path"];
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const config = require("../config/webpack/dev.js");

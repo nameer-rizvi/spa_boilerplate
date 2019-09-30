@@ -1,3 +1,23 @@
-.hello {
-  color: yellow;
+body {
+	min-height: 100vh;
+	max-width: 1280px;
+	margin: auto;
+	padding: 0 30px;
+	display: flex;
+	font-family: sans-serif;
+	background-color: #20232a;
+}
+
+#root {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+}
+
+h1,
+h2 {
+	text-align: center;
 }

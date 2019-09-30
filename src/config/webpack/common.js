@@ -2,8 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const config = require("../app/index");
-const path = config["path"];
+const path = require("../index")["path"];
 const html = require("./html");
 const env = process.env.NODE_ENV === "production";
 

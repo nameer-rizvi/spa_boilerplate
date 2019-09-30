@@ -1,7 +1,7 @@
 const merge = require("webpack-merge");
 
 const common = require("./common.js");
-const toDist = require("../app/index")["path"].toDist;
+const toDist = require("../index")["path"].toDist;
 
 module.exports = merge(common, {
   mode: "development",

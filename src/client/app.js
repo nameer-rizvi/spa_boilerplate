@@ -1,7 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+
+import "./style.scss";
 
 export default class App extends Component {
   render() {
-    return <h1>Hey! You got the react app running - nice!!</h1>;
+    return (
+      <Fragment>
+        <h1>hey, you got it running - nice!!</h1>
+        <h2>happy coding :)</h2>
+      </Fragment>
+    );
   }
 }
