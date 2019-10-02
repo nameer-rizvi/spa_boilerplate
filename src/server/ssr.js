@@ -9,4 +9,4 @@ const compiler = webpack(config);
 module.exports =
   env === "production"
     ? express.static(path.toDist())
-    : webpackDevMiddleware(compiler, { publicPath: "/" });
+    : webpackDevMiddleware(compiler);

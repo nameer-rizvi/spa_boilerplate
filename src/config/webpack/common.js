@@ -4,23 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const path = require("../index")["path"];
 const html = require("./html");
-const env = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: {
     app: path.toClient("/index.js")
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(html),
-    new MiniCssExtractPlugin({
-      filename: "[name].css"
-    })
-  ],
-  output: {
-    filename: env ? "[name].[contenthash].js" : "[name].bundle.js",
-    path: path.toDist()
-  },
+  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin(html)],
+  output: { path: path.toDist() },
   optimization: {
     moduleIds: "hashed",
     runtimeChunk: "single",
@@ -46,18 +36,6 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"]
           }
         }
-      },
-      {
-        test: /\.css$/,
-        use: env
-          ? [MiniCssExtractPlugin.loader, "css-loader"]
-          : ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: env
-          ? [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-          : ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
