@@ -14,6 +14,6 @@ element.id = id;
 
 document.body.appendChild(element);
 
-ReactDOM.hydrate(<App />, document.getElementById(id));
+ReactDOM.render(<App />, document.getElementById(id));
 
 serviceWorker.register();

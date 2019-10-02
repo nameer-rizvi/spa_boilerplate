@@ -6,12 +6,12 @@ const isLocalhost = Boolean(
     )
 );
 
+const isProduction = process.env.NODE_ENV === "production";
+
+const inNavigator = "serviceWorker" in navigator;
+
 export function register() {
-  if (
-    !isLocalhost &&
-    process.env.NODE_ENV === "production" &&
-    "serviceWorker" in navigator
-  ) {
+  if (!isLocalhost && isProduction && inNavigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker
         .register("/service-worker.js")
@@ -25,15 +25,22 @@ export function register() {
           );
         });
     });
+  } else if (isLocalhost) {
+    console.log("Service worker not enabled for localhost.");
+  } else if (!isProduction) {
+    console.log("Server worker only enabled for production.");
+  } else if (!inNavigator) {
+    console.log("Service worker not in navigator.");
   } else {
-    console.log("Service worker only enabled for production.");
+    console.log("Service worker does not meet conditions for registration.");
   }
 }
 
 export function unregister() {
-  if ("serviceWorker" in navigator) {
+  if (inNavigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
+    console.log("Service worker successfully unregistered.");
   }
 }

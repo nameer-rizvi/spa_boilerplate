@@ -19,33 +19,33 @@ The chapters most thoroughly covered in this version are:
 
 ## npm scripts
 
-`npm run build`
+`npm run wp-build`
 
 bundle /client into /dist with an index.html.
 
-`npm run watch`
+`npm run wp-static`
 
 webpack watch mode for changes in /client.
 
-`npm start`
+`npm run wp-dev`
 
 webpack server mode for hot-reload on changes in /client.
 
-`npm run server-static`
+`npm run static`
 
 start express server using node and either serve:
 
 - /client via webpack middleware [development], or
 - /dist via index.html [production].
 
-`npm run server-watch`
+`npm run dev`
 
 start and watch express server using nodemon and either serve:
 
 - /client via webpack middleware [development], or
 - /dist via index.html [production].
 
-`npm run server-http`
+`npm run http`
 
 serve /dist in an http server.
 
