@@ -1,3 +1,6 @@
+const isProduction = require("../config/index")["isProd"];
+const inNavigator = "serviceWorker" in navigator;
+
 const isLocalhost = Boolean(
   window.location.hostname === "localhost" ||
     window.location.hostname === "[::1]" ||
@@ -5,10 +8,6 @@ const isLocalhost = Boolean(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
-
-const isProduction = process.env.NODE_ENV === "production";
-
-const inNavigator = "serviceWorker" in navigator;
 
 export function register() {
   if (!isLocalhost && isProduction && inNavigator) {

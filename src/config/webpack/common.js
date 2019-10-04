@@ -2,11 +2,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const path = require("../index")["path"];
+const config = require("../index");
+const path = config["path"];
+const node_isProd = config["isProd"];
 const html = require("./html");
 
 module.exports = wp_isProd => {
-  const node_isProd = process.env.NODE_ENV === "production";
   const isProd = node_isProd || wp_isProd;
   return {
     entry: {
