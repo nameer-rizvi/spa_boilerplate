@@ -33,7 +33,7 @@ _recommended for client-only development (for static pages)._
 
 bundle /client into /dist with an index.html.
 
-`npm run static`
+`npm run start`
 
 start express server using node and either serve:
 
@@ -54,14 +54,6 @@ _recommended for server-only development._
 `npm run http`
 
 serve /dist in an http server.
-
-`npm run start`
-
-used for deploying app, the procedure goes as follows:
-
-1. install npm packages
-2. run "build" script
-3. run "static" script
 
 ## supported file formats for asset bundling
 

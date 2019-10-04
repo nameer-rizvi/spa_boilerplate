@@ -8,10 +8,9 @@
     "wp-static": "cd src/config/webpack && webpack --watch --config dev.js",
     "wp-dev": "cd src/config/webpack && webpack-dev-server --open --config dev.js",
     "build": "cd src/config/webpack && webpack --config prod.js",
-    "static": "node src/server/index.js",
+    "start": "node src/server/index.js",
     "dev": "nodemon src/server/index.js",
-    "http": "http-server src/dist",
-    "start": "npm install && npm run build && npm run static"
+    "http": "http-server src/dist"
   },
   "repository": {
     "type": "git",
