@@ -10,7 +10,8 @@
     "build": "cd src/config/webpack && webpack --config prod.js",
     "static": "node src/server/index.js",
     "dev": "nodemon src/server/index.js",
-    "http": "http-server src/dist"
+    "http": "http-server src/dist",
+    "start": "npm install && npm run build && npm run static"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nameer-rizvi/ssr_boilerplate/issues"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "homepage": "https://github.com/nameer-rizvi/ssr_boilerplate#readme",
   "devDependencies": {
@@ -56,7 +60,6 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "concurrently": "^4.1.2",
     "connect-history-api-fallback": "^1.6.0",
     "connected-react-router": "^6.5.2",
     "cors": "^2.8.5",
