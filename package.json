@@ -11,7 +11,7 @@
     "static": "node src/server/index.js",
     "dev": "nodemon src/server/index.js",
     "http": "http-server src/dist",
-    "start": "npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
