@@ -5,20 +5,53 @@ body {
   padding: 0 30px;
   display: flex;
   font-family: sans-serif;
-  /*background-color: #20232a;*/
-  background-color: black;
+  background-color: #20232a;
 }
 
 #root {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+a,
+#root {
   color: rgb(255, 255, 255);
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+  padding: 60px 0;
+}
+
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
 }

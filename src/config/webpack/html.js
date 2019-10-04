@@ -1,6 +1,8 @@
+const name = require("../index")["client"]["name"];
+
 module.exports = isProd => {
   return {
-    title: "ssr",
+    title: name,
     favicon: null,
     meta: {
       viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",

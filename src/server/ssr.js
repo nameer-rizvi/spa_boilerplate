@@ -11,4 +11,4 @@ const compiler = webpack(wp_config);
 
 module.exports = isProd
   ? express.static(path.toDist())
-  : webpackDevMiddleware(compiler, { stats: "minimal" });
+  : webpackDevMiddleware(compiler, app_config["webpack"]);
