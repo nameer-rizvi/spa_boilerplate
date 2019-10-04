@@ -19,10 +19,6 @@ The chapters most thoroughly covered in this version are:
 
 ## npm scripts
 
-`npm run build`
-
-bundle /client into /dist with an index.html.
-
 `npm run wp-static`
 
 webpack watch mode for changes in /client.
@@ -31,7 +27,11 @@ webpack watch mode for changes in /client.
 
 webpack server mode for hot-reload on changes in /client.
 
-_recommended for client-only development (for static pages)_
+_recommended for client-only development (for static pages)._
+
+`npm run build`
+
+bundle /client into /dist with an index.html.
 
 `npm run static`
 
@@ -40,7 +40,7 @@ start express server using node and either serve:
 - /client via webpack middleware [development], or
 - /dist via index.html [production].
 
-_recommended for client-only development (for api-dependent pages)_
+_recommended for client-only development (for api-dependent pages)._
 
 `npm run dev`
 
@@ -49,7 +49,7 @@ start and watch express server using nodemon and either serve:
 - /client via webpack middleware [development], or
 - /dist via index.html [production].
 
-_recommended for server-only development_
+_recommended for server-only development._
 
 `npm run http`
 
