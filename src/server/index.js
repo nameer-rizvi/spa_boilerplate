@@ -9,7 +9,8 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 
-const port = process.env.PORT || 5000;
+const config = require("../config/index");
+const port = process.env.PORT || config["port"];
 const env = process.env.NODE_ENV;
 
 app.listen(port, () => {
@@ -21,3 +22,6 @@ const ssr = require("./ssr");
 
 app.use("/api", api);
 app.use(ssr);
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../dist/index.html"));
+});

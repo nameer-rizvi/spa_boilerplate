@@ -1,4 +1,4 @@
-module.exports = isProduction => {
+module.exports = isProd => {
   return {
     title: "ssr",
     favicon: null,
@@ -9,8 +9,10 @@ module.exports = isProduction => {
       robots: "index,follow",
       googlebot: "index,follow"
     },
-    minify: isProduction,
+    minify: isProd,
     hash: false,
     cache: true
   };
 };
+
+// https://github.com/jantimon/html-webpack-plugin

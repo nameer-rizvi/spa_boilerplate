@@ -6,7 +6,8 @@ const path = require("../index")["path"];
 const html = require("./html");
 
 module.exports = wp_isProd => {
-  const isProd = process.env.NODE_ENV === "production" || wp_isProd;
+  const node_isProd = process.env.NODE_ENV === "production";
+  const isProd = node_isProd || wp_isProd;
   return {
     entry: {
       app: path.toClient("/index.js")
