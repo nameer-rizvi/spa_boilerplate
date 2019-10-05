@@ -10,16 +10,14 @@ class Header extends Component {
         <Link to="/" className="logo">
           {name}
         </Link>
-        <nav>
-          <a
-            href="https://github.com/nameer-rizvi/ssr_boilerplate"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover-underline"
-          >
-            github
-          </a>
-        </nav>
+        <a
+          href="https://github.com/nameer-rizvi/ssr_boilerplate"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="logo hover-underline"
+        >
+          github
+        </a>
       </header>
     );
   }

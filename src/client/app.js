@@ -8,7 +8,7 @@ import Header from "./components/header";
 import HomePage from "./components/home";
 import NotFound from "./components/404";
 
-import "./style.scss";
+import "./styles/index.scss";
 
 export default class App extends Component {
   render() {
