@@ -92,11 +92,11 @@ _Recommended for client-only development (for api-dependent pages)._
 ### Webpack
 
 - Asset bundling support for the following file formats:
-  - Javascript: js, jsx
-  - Stylesheets: css, scss, sass
-  - Images: png, svg, jpg, gif
-  - Fonts: woff, woff2, eot, ttf, otf
-  - Data: json, csv, tsv, xml
+  - Javascript: js, jsx.
+  - Stylesheets: css, scss, sass.
+  - Images: png, svg, jpg, gif.
+  - Fonts: woff, woff2, eot, ttf, otf.
+  - Data: json, csv, tsv, xml.
 - Dev server with settings included:
   - historyApiFallback to allow SPA routing;
   - hot reloading;
