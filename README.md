@@ -1,6 +1,12 @@
-# The What
+# SERVER-SIDE-RENDERING BABY
 
 Express server serving a react client via webpack middleware.
+
+### 100% Control [THE HOT SAUCE]
+
+The app includes a config folder that hosts anything (constants, functions, conditionals, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike create-react-app or gatsby, the app doesn't require a dirty ejection to share things between the client and server. Here, you can seamlessly do such things as share validations on both ends using a single file, significantly decreasing double-code and maintenance-headaches and increasing development time and dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
+
+There's already some config settings included in the /config/index.js file to demonstrate this, such as a simple share of the app name between the webpack html generator and the react app. Another example is the consolidated path file, so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware.
 
 ## Conception
 
@@ -21,7 +27,7 @@ The chapters most thoroughly covered in this version are:
 
 `npm i`
 
-...I forget this one all the time: when you clone/download a repo, you HAVE to install the packages first..to make the app work.
+...I forget this one all the time: when you clone/download a repo, you HAVE to install the packages first in order to make the app twork for ya ;)
 
 `npm run wp-static`
 
@@ -59,13 +65,14 @@ Start express server using node and either serve:
 
 _Recommended for client-only development (for api-dependent pages)._
 
+**If the cloud platform you choose to deploy with doesn't already read the build and/or start scripts, it is recommended you check the platforms documentations to learn how to run a "production" script that may go something like "npm run build && npm run start". Also, don't forget to change the NODE_ENV to "production" either through the platform's GUI or console.**
+
 ## Features
 
 ### App
 
 - Scripts for app use in development/production (see npm scripts section above).
 - Dotenv for use of environment variables.
-- Config folder that hosts anything (constants, conditionals, functions, etc.) required in more than one file. It includes a consolidated path file so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required.
 
 ### React
 
