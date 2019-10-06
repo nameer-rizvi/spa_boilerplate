@@ -2,14 +2,15 @@ import React, { Component, Fragment } from "react";
 import { Route, Switch } from "react-router";
 import { ConnectedRouter } from "connected-react-router";
 
-import { history } from "./store";
-import { get } from "./get";
+import { history } from "../redux/store";
 
-import Header from "./components/header";
-import HomePage from "./components/home";
-import NotFound from "./components/404";
+import Header from "./header";
+import HomePage from "./main/home";
+import NotFound from "./main/404";
 
-import "./styles/index.scss";
+import { get } from "../axios";
+
+import "../style.scss";
 
 export default class App extends Component {
   componentDidMount() {

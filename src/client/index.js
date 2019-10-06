@@ -4,10 +4,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import { store } from "./store";
-import App from "./app";
-
-import { theme } from "./styles/themes";
+import { store } from "./redux/store";
+import App from "./components/app";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -15,7 +13,6 @@ const id = "root";
 const element = document.createElement("div");
 
 element.id = id;
-element.style.cssText = theme();
 
 document.body.appendChild(element);
 

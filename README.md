@@ -57,7 +57,7 @@ Start express server using node.
 
 `npm run demo`
 
-Start express server using node and serve static assets in /dist via index.html.
+Start express server using node and serve static assets in /dist via index.html. NOTE: NODE_ENV must be set to production before running script to view app.
 
 _Recommended for viewing prod-version of app prior to deployment._
 
@@ -76,7 +76,6 @@ _Recommended for viewing prod-version of app prior to deployment._
   - header component;
   - home page component;
   - 404 page component;
-  - themes for root element;
   - sass stylesheet; and,
   - initial get function in app.js to fetch data (via axios) from the api route.
 - Redux, with a store setup that includes:

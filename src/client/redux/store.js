@@ -14,7 +14,7 @@ const middleware = routerMiddleware(history);
 const middleware2 = applyMiddleware(middleware, thunk, promise);
 
 const config = () => {
-  return require("../config/index")["client"];
+  return require("../../config/index")["client"];
 };
 
 export const store = createStore(
