@@ -9,13 +9,13 @@ import createRootReducer from "./reducer";
 
 export const history = createBrowserHistory();
 
-const config = () => {
-  return require("../config/index")["client"];
-};
-
 const middleware = routerMiddleware(history);
 
 const middleware2 = applyMiddleware(middleware, thunk, promise);
+
+const config = () => {
+  return require("../config/index")["client"];
+};
 
 export const store = createStore(
   createRootReducer(history, config),

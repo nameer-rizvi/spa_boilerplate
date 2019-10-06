@@ -10,8 +10,9 @@ export function get() {
 }
 
 function api() {
-  const host = window.location.host;
-  return host.includes(port.client)
-    ? `http://localhost:${port.server}/api`
-    : "/api";
+  const origin = window.location.origin;
+  const endpoint = "/api";
+  return origin.includes(port.client)
+    ? `${origin.replace(port.client, port.server)}${endpoint}`
+    : endpoint;
 }
