@@ -15,7 +15,7 @@ const port = require("../config/index")["port"]["server"];
 const env = process.env.NODE_ENV;
 
 // To set your environment variable, create a .env file
-// in the project's root directory and in it write
+// in the project's root folder and in it write
 // 'NODE_ENV=[environment name]'. Once saved, you will
 // probably be required to exit the server and
 // start it again via npm script.
@@ -25,7 +25,7 @@ app.listen(port, () => {
 });
 
 const api = require("./api");
-const ssr = require("./ssr");
+const ssr = require("./ssr/index");
 
 app.use("/api", api);
 app.use(ssr);
