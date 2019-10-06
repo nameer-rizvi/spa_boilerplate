@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router";
 import { ConnectedRouter } from "connected-react-router";
 
 import { history } from "./store";
-import { get } from "./axios";
+import { get } from "./get";
 
 import Header from "./components/header";
 import HomePage from "./components/home";

@@ -4,7 +4,7 @@ Express server serving a react client via webpack middleware.
 
 ### 100% Control [THE HOT SAUCE]
 
-This app includes a config folder that hosts anything (constants, functions, conditionals, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike create-react-app or gatsby, this app doesn't require a dirty ejection to share things between the client and server. Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
+The app includes a config folder that hosts anything (constants, functions, conditionals, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike create-react-app or gatsby, the app doesn't require a dirty ejection to share things between the client and server. Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
 There's already some config settings included in the /config/index.js file to demonstrate this, such as a simple share of the app name between the webpack html generator and the react app. Another example is the consolidated path file, so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware.
 
@@ -37,7 +37,7 @@ _Recommended for front-end-only development._
 
 `npm run server`
 
-Start & watch the express using nodemon.
+Start & watch the express server using nodemon.
 
 _Recommended for back-end-only development._
 
@@ -61,7 +61,7 @@ Start express server using node and serve static assets in /dist via index.html.
 
 _Recommended for viewing prod-version of app prior to deployment._
 
-**If the cloud platform you choose to deploy with doesn't already read the build and/or start scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start". Also, don't forget to change the NODE_ENV to "production" either through the platform's GUI or console.**
+**If the cloud platform you choose to deploy with doesn't already read the 'build' and/or 'start' scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start". Also, don't forget to change the NODE_ENV to "production" either through the platform's GUI or console.**
 
 ## Features
 
