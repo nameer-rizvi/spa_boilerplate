@@ -1,9 +1,11 @@
-const name = require("../index")["client"]["name"];
+const path = require("path");
+
+const name = require("../../index")["client"]["name"];
 
 module.exports = isProd => {
   return {
     title: name,
-    favicon: null,
+    favicon: path.resolve(__dirname, "favicon.ico"),
     meta: {
       viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
       "theme-color": "#ffffff",
@@ -17,4 +19,5 @@ module.exports = isProd => {
   };
 };
 
-// https://github.com/jantimon/html-webpack-plugin
+// html-webpack-plugin github: https://github.com/jantimon/html-webpack-plugin
+// favicon generator: https://favicon.io/

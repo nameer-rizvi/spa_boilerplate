@@ -5,12 +5,12 @@
   "main": "/src/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wp-static": "cd src/config/webpack && webpack --watch --config dev.js",
     "wp-dev": "cd src/config/webpack && webpack-dev-server --open --config dev.js",
-    "dev": "nodemon src/server/index.js",
-    "http": "http-server src/dist",
+    "server": "nodemon src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run wp-dev\"",
     "build": "cd src/config/webpack && webpack --config prod.js",
-    "start": "node src/server/index.js"
+    "start": "node src/server/index.js",
+    "demo": "npm run build && npm run start"
   },
   "repository": {
     "type": "git",
@@ -44,7 +44,6 @@
     "csv-loader": "^3.0.2",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
-    "http-server": "^0.11.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.2",
@@ -57,7 +56,9 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
+    "concurrently": "^4.1.2",
     "connect-history-api-fallback": "^1.6.0",
     "connected-react-router": "^6.5.2",
     "cors": "^2.8.5",
@@ -75,7 +76,6 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-promise-middleware": "^6.1.1",
     "redux-thunk": "^2.3.0",
-    "webpack": "^4.41.0",
-    "webpack-dev-middleware": "^3.7.2"
+    "webpack": "^4.41.0"
   }
 }

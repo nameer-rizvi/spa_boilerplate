@@ -11,8 +11,14 @@ app.use(cors());
 app.use(helmet());
 app.use(historyApiFallback());
 
-const port = process.env.PORT || require("../config/index")["port"];
+const port = require("../config/index")["port"]["server"];
 const env = process.env.NODE_ENV;
+
+// To set your environment variable, create a .env file
+// in the project's root directory and in it write
+// 'NODE_ENV=[environment name]'. Once saved, you will
+// probably be required to exit the server and
+// start it again via npm script.
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port} in ${env} environment.`);

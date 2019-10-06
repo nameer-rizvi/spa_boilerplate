@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const config = require("../index");
 const path = config["path"];
 const node_isProd = config["isProd"];
-const html = require("./html");
+const html = require("./html/index");
 
 module.exports = wp_isProd => {
   const isProd = node_isProd || wp_isProd;
@@ -30,7 +30,6 @@ module.exports = wp_isProd => {
       moduleIds: "hashed",
       runtimeChunk: "single",
       splitChunks: {
-        // chunks: "all",
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,

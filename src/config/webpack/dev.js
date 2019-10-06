@@ -2,8 +2,8 @@ const merge = require("webpack-merge");
 
 const common = require("./common.js");
 const config = require("../index");
-const toDist = config["path"].toDist;
-const port = config["port"];
+const toDist = config["path"]["toDist"];
+const port = config["port"]["client"];
 
 module.exports = merge(common(false), {
   mode: "development",
@@ -12,7 +12,7 @@ module.exports = merge(common(false), {
     historyApiFallback: true,
     hot: true,
     compress: true,
-    port: port + 1,
-    ...config["webpack"]
+    port: port,
+    stats: "minimal"
   }
 });
