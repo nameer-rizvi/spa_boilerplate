@@ -11,6 +11,7 @@ module.exports = {
     client: port + 1
   },
   path: path,
+  endpoint: "/api",
   client: {
     name: "[app name]"
   }

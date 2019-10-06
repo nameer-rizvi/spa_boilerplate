@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const port = require("../config/index")["port"];
-
 export function get() {
   axios
     .get(encodeURI(api()))
@@ -10,8 +8,10 @@ export function get() {
 }
 
 function api() {
+  const config = require("../config/index");
+  const port = config["port"];
+  const endpoint = config["endpoint"];
   const origin = window.location.origin;
-  const endpoint = "/api";
   return origin.includes(port.client)
     ? `${origin.replace(port.client, port.server)}${endpoint}`
     : endpoint;
