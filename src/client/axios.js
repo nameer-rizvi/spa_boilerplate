@@ -8,10 +8,10 @@ export function get() {
 }
 
 function api() {
+  const origin = window.location.origin;
   const config = require("../config/index");
   const port = config["port"];
   const endpoint = config["endpoint"];
-  const origin = window.location.origin;
   return origin.includes(port.client)
     ? `${origin.replace(port.client, port.server)}${endpoint}`
     : endpoint;

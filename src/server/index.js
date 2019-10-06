@@ -25,8 +25,8 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port} in ${env} environment.`);
 });
 
-const api = require("./api");
 const endpoint = config["endpoint"];
+const api = require("./api");
 const ssr = require("./ssr/index");
 
 app.use(endpoint, api);
