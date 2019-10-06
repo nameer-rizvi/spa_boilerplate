@@ -1,11 +1,13 @@
 const config = require("../config/index");
 const isProd = config["isProd"];
-const path = config["path"];
+const toHtml = config["path"]["toHtml"];
+const toDist = config["path"]["toDist"];
 
 const fs = require("fs");
-const htmlExists = fs.existsSync(path.toHtml());
+const htmlExists = fs.existsSync(toHtml());
 
 const express = require("express");
+const router = express.Router();
 
 const message = [
   "Server can't --get-- through browser's window (via url) because the app is using the historyApiFallback module.",
@@ -15,7 +17,9 @@ const message = [
   "- npm page: https://www.npmjs.com/package/connect-history-api-fallback"
 ];
 
-module.exports = (req, res) =>
+module.exports =
   isProd && htmlExists
-    ? express.static(path.toDist())
-    : res.status(200).send(message);
+    ? express.static(toDist())
+    : (req, res) => {
+        res.status(200).send(message);
+      };
