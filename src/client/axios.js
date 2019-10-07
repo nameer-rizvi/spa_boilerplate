@@ -12,7 +12,7 @@ function api() {
   const config = require("../config/index");
   const port = config["port"];
   const endpoint = config["endpoint"];
-  return origin.includes(port.client)
+  return origin.includes(`:${port.client}`)
     ? `${origin.replace(port.client, port.server)}${endpoint}`
     : endpoint;
 }
