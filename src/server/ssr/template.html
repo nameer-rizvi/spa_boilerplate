@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html
-  style="height: 100%;
+  style="min-height: 100%;
     font-family: sans-serif;
     background-color: #20232a;
     color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0 40px;"
+    align-items: center;"
 >
   <head>
     <title>[server]</title>
   </head>
-  <body style="max-width: 700px;">
+  <body style="max-width: 700px; padding: 40px">
     <h1>
       Server can't GET through browser's window (via url) because the app is
       using the historyApiFallback module.
@@ -29,7 +28,7 @@
         rel="noopener noreferrer"
         style="color: #61dafb; text-decoration: none;"
       >
-        github
+        github readme
       </a>
       or
       <a
@@ -38,24 +37,23 @@
         rel="noopener noreferrer"
         style="color: #61dafb; text-decoration: none;"
       >
-        npm
-      </a>
-      pages.
+        npm page</a
+      >.
     </h3>
     <p style="line-height: 20px;">
       A temporary solution is to comment the line in /server/index.js that
       contains 'app.use(historyApiFallback())'. You should then be able to hit
       the route and see the intended result. It is not recommended, but if done,
       please don't forget to uncomment the line before working on the front-end
-      or deployment...otherwise there'll most likely be issues with the
+      or deploying the app...otherwise there'll most likely be issues with the
       react-router for client-side-routing.
     </p>
     <p style="line-height: 20px;">
       If you're on your local machine and you ran the script 'npm run demo', you
       probably forgot to set the NODE_ENV to 'production'. To set your
       environment variable, create a .env file in the project's root folder and
-      in it write 'NODE_ENV=production'. Once saved, you will be required to
-      exit the server and start it again via npm script.
+      in it write 'NODE_ENV=production'. Once saved, you will need to exit the
+      server and start it again via npm script.
     </p>
   </body>
 </html>
