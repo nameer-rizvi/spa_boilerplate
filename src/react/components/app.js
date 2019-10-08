@@ -17,7 +17,10 @@ export default class App extends Component {
     get();
   }
 
+  state = { Hey: "look you can use state/hooks!" };
+
   render() {
+    console.log("[APP.JS/STATE]: ", this.state);
     return (
       <ConnectedRouter history={history}>
         <Header />
