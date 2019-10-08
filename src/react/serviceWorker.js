@@ -1,4 +1,4 @@
-const isProduction = require("../config/index")["isProd"];
+const isProduction = require("../shared/index")["isProd"];
 const inNavigator = "serviceWorker" in navigator;
 
 const isLocalhost = Boolean(

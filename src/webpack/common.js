@@ -2,9 +2,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const config = require("../index");
-const path = config["path"];
-const node_isProd = config["isProd"];
+const shared = require("../shared/index");
+const path = shared["path"];
+const node_isProd = shared["isProd"];
 const html = require("./html/index");
 
 module.exports = wp_isProd => {

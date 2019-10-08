@@ -2,14 +2,14 @@
   "name": "ssr_boilerplate",
   "version": "1.0.0",
   "description": "Express server serving a react client via webpack middleware.",
-  "main": "/src/server/index.js",
+  "main": "/src/express/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wp-dev": "cd src/config/webpack && webpack-dev-server --open --config dev.js",
-    "server": "nodemon src/server/index.js",
+    "wp-dev": "cd src/webpack && webpack-dev-server --open --config dev.js",
+    "server": "nodemon src/express/index.js",
     "dev": "concurrently \"npm run server\" \"npm run wp-dev\"",
-    "build": "cd src/config/webpack && webpack --config prod.js",
-    "start": "node src/server/index.js",
+    "build": "cd src/webpack && webpack --config prod.js",
+    "start": "node src/express/index.js",
     "demo": "npm run build && npm run start"
   },
   "repository": {

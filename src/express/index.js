@@ -11,8 +11,8 @@ app.use(cors());
 app.use(helmet());
 app.use(historyApiFallback());
 
-const config = require("../config/index");
-const port = config["port"]["server"];
+const shared = require("../shared/index");
+const port = shared["port"]["server"];
 const env = process.env.NODE_ENV;
 
 // To set your environment variable, create a .env file
@@ -25,7 +25,7 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port} in ${env} environment.`);
 });
 
-const endpoint = config["endpoint"];
+const endpoint = shared["endpoint"];
 const api = require("./api");
 const ssr = require("./ssr/index");
 

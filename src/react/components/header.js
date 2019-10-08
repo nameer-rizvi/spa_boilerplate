@@ -25,7 +25,7 @@ class Header extends Component {
 
 function mapStateToProps(state) {
   return {
-    name: state.config.name
+    name: state.shared.name
   };
 }
 

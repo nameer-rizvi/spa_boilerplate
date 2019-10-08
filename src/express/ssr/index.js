@@ -1,7 +1,7 @@
-const config = require("../../config/index");
-const isProd = config["isProd"];
-const toHtml = config["path"]["toHtml"];
-const toDist = config["path"]["toDist"];
+const shared = require("../../shared/index");
+const isProd = shared["isProd"];
+const toHtml = shared["path"]["toHtml"];
+const toDist = shared["path"]["toDist"];
 
 const fs = require("fs");
 const htmlExists = fs.existsSync(toHtml());

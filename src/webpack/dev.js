@@ -1,9 +1,9 @@
 const merge = require("webpack-merge");
 
 const common = require("./common.js");
-const config = require("../index");
-const toDist = config["path"]["toDist"];
-const port = config["port"]["client"];
+const shared = require("../shared/index");
+const toDist = shared["path"]["toDist"];
+const port = shared["port"]["client"];
 
 module.exports = merge(common(false), {
   mode: "development",

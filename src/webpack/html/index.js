@@ -1,6 +1,6 @@
 const path = require("path");
 
-const name = require("../../index")["client"]["name"];
+const name = require("../../shared/index")["client"]["name"];
 
 module.exports = isProd => {
   return {
