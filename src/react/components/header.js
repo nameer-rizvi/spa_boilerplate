@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { Github } from "styled-icons/icomoon/Github";
 
 class Header extends Component {
   render() {
@@ -16,7 +17,7 @@ class Header extends Component {
           rel="noopener noreferrer"
           className="logo hover-underline"
         >
-          github
+          <Github style={{ height: "30px", width: "30px" }} />
         </a>
       </header>
     );

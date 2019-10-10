@@ -85,6 +85,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - redux-devtools for the use of the extension on Chrome; and,
   - a root reducer with router & client shared constants pre-loaded.
 - Service worker registration in production.
+- [Styled icons](https://styled-icons.js.org/).
 
 ### Express
 
