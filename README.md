@@ -76,15 +76,15 @@ _Recommended for viewing prod-version of app prior to deployment._
   - header component;
   - home page component;
   - 404 page component;
-  - sass stylesheet; and,
-  - initial get function in app.js to fetch data (via axios) from the api route.
+  - sass stylesheet;
+  - initial get function in app.js to fetch data (via axios) from the api route; and,
+  - sample state/hook in app.js.
 - Redux, with a store setup that includes:
   - history + connected-react-router for SPA routing;
   - redux-thunk + redux-promise for creating api middleware;
   - redux-devtools for the use of the extension on Chrome; and,
   - a root reducer with router & client shared constants pre-loaded.
 - Service worker registration in production.
-- Sample state/hook in app.js.
 
 ### Express
 
@@ -103,7 +103,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - Data: json, csv, tsv, xml.
 - Dev server with the following settings:
   - historyApiFallback to allow SPA routing;
-  - hot reloading;
+  - hot reloading; and,
   - file compression.
 - Source-mapping.
 - SplitChunks (vendors) for optimization.
