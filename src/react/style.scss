@@ -24,6 +24,10 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  a:hover,
+  svg:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+  }
 }
 
 main {

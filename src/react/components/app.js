@@ -17,7 +17,10 @@ export default class App extends Component {
     get();
   }
 
-  state = { Hey: "look you can use state/hooks!" };
+  state = {
+    Hello:
+      "Babel's plugin-proposal-class-properties plugin allows the use of state/hooks!"
+  };
 
   render() {
     console.log("[APP.JS/STATE]: ", this.state);

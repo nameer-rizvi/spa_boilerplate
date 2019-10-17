@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
+const isProd = require("../shared/index")["isProd"];
+
 router.use((req, res) => {
   const data = {
-    welcome:
-      "Welcome! This is the api route. Feel free to branch off from here.",
-    key1: "value1",
-    key2: "value2",
-    key3: "value3"
+    Welcome: `This has been fetched from the express server via api endpoint.${
+      !isProd ? " You can find me at /src/express/api.js." : ""
+    }`
   };
 
   res.status(200).send(data);

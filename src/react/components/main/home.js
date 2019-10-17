@@ -7,6 +7,7 @@ const HomePage = () => {
     <Fragment>
       <h1>Well, would ya look at this?</h1>
       <h2>The app is in production.</h2>
+      <h3>Check the console to see some goods 🎁</h3>
     </Fragment>
   ) : (
     <Fragment>
