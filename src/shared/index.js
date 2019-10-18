@@ -12,7 +12,5 @@ module.exports = {
   },
   path: path,
   endpoint: "/api",
-  client: {
-    name: "[app name]"
-  }
+  name: "[app name]"
 };

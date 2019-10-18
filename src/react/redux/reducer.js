@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 import { connectRouter } from "connected-react-router";
 
-export default (history, shared) =>
+export default history =>
   combineReducers({
-    router: connectRouter(history),
-    shared: shared
+    router: connectRouter(history)
   });

@@ -13,11 +13,7 @@ const middleware = routerMiddleware(history);
 
 const middleware2 = applyMiddleware(middleware, thunk, promise);
 
-const shared = () => {
-  return require("../../shared/index")["client"];
-};
-
 export const store = createStore(
-  createRootReducer(history, shared),
+  createRootReducer(history),
   composeWithDevTools(middleware2)
 );

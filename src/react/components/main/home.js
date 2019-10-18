@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 const isProduction = require("../../../shared/index")["isProd"];
 
-const HomePage = () => {
+function HomePage() {
   return isProduction ? (
     <Fragment>
       <h1>Well, would ya look at this?</h1>
@@ -17,6 +17,6 @@ const HomePage = () => {
       <h3>p.s. im at /src/react/components/main/home.js</h3>
     </Fragment>
   );
-};
+}
 
 export default HomePage;
