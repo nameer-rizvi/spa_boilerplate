@@ -9,29 +9,28 @@ const isLocalhost = Boolean(
     )
 );
 
+const sw = "👷 service worker";
+
 export function register() {
   if (!isLocalhost && isProduction && inNavigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker
         .register("/service-worker.js")
         .then(registration => {
-          console.log("Service worker registered.");
+          console.log(`${sw} registered.`);
         })
         .catch(registrationError => {
-          console.log(
-            "Service worker registration failed: ",
-            registrationError
-          );
+          console.log(`${sw} registration failed: `, registrationError);
         });
     });
   } else if (isLocalhost) {
-    console.log("Service worker not enabled for localhost.");
+    console.log(`${sw} not enabled for localhost.`);
   } else if (!isProduction) {
-    console.log("Server worker only enabled for production.");
+    console.log(`${sw} only enabled for production.`);
   } else if (!inNavigator) {
-    console.log("Service worker not in navigator.");
+    console.log(`${sw} not in navigator.`);
   } else {
-    console.log("Service worker does not meet conditions for registration.");
+    console.log(`${sw} does not meet conditions for registration.`);
   }
 }
 
@@ -40,6 +39,6 @@ export function unregister() {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
-    console.log("Service worker successfully unregistered.");
+    console.log(`${sw} successfully unregistered.`);
   }
 }

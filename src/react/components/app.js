@@ -23,7 +23,7 @@ export default class App extends Component {
   };
 
   render() {
-    console.log("[APP.JS/STATE]: ", this.state);
+    console.log("🗄️ [APP.JS/STATE]: ", this.state);
     return (
       <ConnectedRouter history={history}>
         <Header />

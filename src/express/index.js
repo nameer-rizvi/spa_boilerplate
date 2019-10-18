@@ -22,7 +22,7 @@ const env = process.env.NODE_ENV;
 // start it again via npm script.
 
 app.listen(port, () => {
-  console.log(`Server listening on port ${port} in ${env} environment.`);
+  console.log(`🚀 server listening on port ${port} in ${env} environment.`);
 });
 
 const endpoint = shared["endpoint"];

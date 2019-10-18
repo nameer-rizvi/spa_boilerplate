@@ -3,8 +3,8 @@ import axios from "axios";
 export function get() {
   axios
     .get(encodeURI(api()))
-    .then(res => console.log("[GET/SUCCESS]", res.data))
-    .catch(err => console.log("[GET/ERROR]", err));
+    .then(res => console.log("📟 [GET/SUCCESS]", res.data))
+    .catch(err => console.log("📟 [GET/ERROR]", err));
 }
 
 function api() {
