@@ -1,4 +1,5 @@
-const isProduction = require("../shared/index")["isProd"];
+import { isProd } from "../shared/index";
+
 const inNavigator = "serviceWorker" in navigator;
 
 const isLocalhost = Boolean(
@@ -12,7 +13,7 @@ const isLocalhost = Boolean(
 const sw = "👷 service worker";
 
 export function register() {
-  if (!isLocalhost && isProduction && inNavigator) {
+  if (!isLocalhost && isProd && inNavigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker
         .register("/service-worker.js")
@@ -25,7 +26,7 @@ export function register() {
     });
   } else if (isLocalhost) {
     console.log(`${sw} not enabled for localhost.`);
-  } else if (!isProduction) {
+  } else if (!isProd) {
     console.log(`${sw} only enabled for production.`);
   } else if (!inNavigator) {
     console.log(`${sw} not in navigator.`);

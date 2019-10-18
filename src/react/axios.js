@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import { port, endpoint } from "../shared/index";
+
 export function get() {
   axios
     .get(encodeURI(api()))
@@ -9,9 +11,6 @@ export function get() {
 
 function api() {
   const origin = window.location.origin;
-  const shared = require("../shared/index");
-  const port = shared["port"];
-  const endpoint = shared["endpoint"];
   return origin.includes(`:${port.client}`)
     ? `${origin.replace(port.client, port.server)}${endpoint}`
     : endpoint;

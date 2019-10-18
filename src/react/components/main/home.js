@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
-const isProduction = require("../../../shared/index")["isProd"];
+import { isProd } from "../../../shared";
 
 function HomePage() {
-  return isProduction ? (
+  return isProd ? (
     <Fragment>
       <h1>Well, would ya look at this?</h1>
       <h2>The app is in production.</h2>

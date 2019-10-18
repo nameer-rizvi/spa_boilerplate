@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Github } from "styled-icons/icomoon/Github";
 
-const name = require("../../shared/index")["name"];
+import { name } from "../../shared";
 
 function Header() {
   return (
