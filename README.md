@@ -6,7 +6,7 @@ Express server serving a react client via webpack middleware.
 
 The app includes a shared folder that hosts anything (constants, functions, conditionals, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike create-react-app or gatsby, the app doesn't require a dirty ejection to share things between the client and server. Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
-There's already some shared settings included in the /src/shared/index.js file to demonstrate this, such as a simple share of the app name between the webpack html generator and the react app. Another example is the consolidated path file, so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware.
+There's already some shared settings included in the /src/shared/index.js file to demonstrate this, such as a simple share of the app name between the webpack html generator and the react app. Another example is the consolidated path file, so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware. There's also a logging function for consistent formatting across the app.
 
 ## Conception
 

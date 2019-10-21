@@ -10,6 +10,8 @@ import NotFound from "./main/404";
 
 import { get } from "../axios";
 
+import { log } from "../../shared/index";
+
 import "../style.scss";
 
 export default class App extends Component {
@@ -23,7 +25,7 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(`\n🗄️ [APP/STATE]\n\n${this.state.hello}\n\n`);
+    log({ emoji: "🗄️", label: "[APP/STATE]", message: this.state.hello });
     return (
       <ConnectedRouter history={history}>
         <Header />

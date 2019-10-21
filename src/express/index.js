@@ -12,6 +12,7 @@ app.use(helmet());
 app.use(historyApiFallback());
 
 const shared = require("../shared/index");
+const log = shared["log"];
 const port = shared["port"]["server"];
 const env = process.env.NODE_ENV;
 
@@ -22,7 +23,11 @@ const env = process.env.NODE_ENV;
 // start it again via npm script.
 
 app.listen(port, () => {
-  console.log(`🚀 server listening on port ${port} in ${env} environment.`);
+  log({
+    emoji: "🚀",
+    label: "[EXPRESS]",
+    message: `Server listening on port ${port} in ${env} environment.`
+  });
 });
 
 const endpoint = shared["endpoint"];

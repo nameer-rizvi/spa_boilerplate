@@ -1,14 +1,20 @@
 import axios from "axios";
 
-import { port, endpoint } from "../shared/index";
+import { port, endpoint, log } from "../shared/index";
 
 export function get() {
   axios
     .get(encodeURI(api()))
     .then(res =>
-      console.log(`\n📟 [AXIOS/GET] [SUCCESS]\n\n${res.data.welcome}\n\n`)
+      log({
+        emoji: "📟",
+        label: "[AXIOS/GET] [SUCCESS]",
+        message: res.data.welcome
+      })
     )
-    .catch(err => console.log(`\n📟 [AXIOS/GET] [ERROR]\n\n${err}\n\n`));
+    .catch(err =>
+      log({ emoji: "📟", label: "[AXIOS/GET] [ERROR]", message: err })
+    );
 }
 
 function api() {

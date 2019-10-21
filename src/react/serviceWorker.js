@@ -1,4 +1,4 @@
-import { isProd } from "../shared/index";
+import { isProd, log } from "../shared/index";
 
 const inNavigator = "serviceWorker" in navigator;
 
@@ -10,8 +10,12 @@ const isLocalhost = Boolean(
     )
 );
 
-const format = message => {
-  return `\n👷 [SERVICE WORKER]\n\nService worker ${message}.\n\n`;
+const logStatus = message => {
+  log({
+    emoji: "👷",
+    label: "[SERVICE WORKER]",
+    message: `Service worker ${message}`
+  });
 };
 
 export function register() {
@@ -20,20 +24,20 @@ export function register() {
       navigator.serviceWorker
         .register("/service-worker.js")
         .then(registration => {
-          console.log(format("registered"));
+          logStatus("registered");
         })
         .catch(registrationError => {
-          console.log(format("registration failed"));
+          logStatus("registration failed");
         });
     });
   } else if (isLocalhost) {
-    console.log(format("not enabled for localhost"));
+    logStatus("not enabled for localhost");
   } else if (!isProd) {
-    console.log(format("only enabled for production"));
+    logStatus("only enabled for production");
   } else if (!inNavigator) {
-    console.log(format("not in navigator"));
+    logStatus("not in navigator");
   } else {
-    console.log(format("does not meet conditions for registration"));
+    logStatus("does not meet conditions for registration");
   }
 }
 
@@ -42,6 +46,6 @@ export function unregister() {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
-    console.log(`${sw} successfully unregistered.`);
+    logStatus("successfully unregistered");
   }
 }
