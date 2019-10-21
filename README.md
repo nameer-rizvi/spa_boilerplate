@@ -25,13 +25,33 @@ The chapters most thoroughly covered in this version are:
 
 ## Get Started
 
-Though there's the traditional method of cloning/downloading a repo through the command line or terminal available (`git clone https://github.com/nameer-rizvi/ssr_boilerplate.git`), the "Use this template" option has been enabled to allow the cleanest transfer of the project to your own repo library - it is the recommended option and it is accessible through the green button above with the same name.
+- If you have a github account, the "Use this template" option is available (the nice and green button above). This is the recommended method as it will easily transfer the boilerplate to your library of repo's without any further config.
 
-## NPM Scripts
+Otherwise, in your terminal / command line, you can change into the directory where you'd like to install the repo and...
+
+1. clone the repo,
+
+`git clone https://github.com/nameer-rizvi/ssr_boilerplate.git`
+
+2. cd into the repo,
+
+`cd ssr_boilerplate/`
+
+3. remove the remote reference to origin OR set it to your new github repo,
+
+`git remote remove origin` OR `git remote set-url origin git://new.url.here`
+
+4. install all the required npm packages listed in package.json, and
 
 `npm install`
 
-...I forget this one all the time: when you clone/download a repo, you HAVE to install the packages first in order to make the app twork for ya ;)
+5. start the dev server.
+
+`npm run dev`
+
+VOILA! Easy-peezy!
+
+## NPM Scripts
 
 `npm run wp-dev`
 
