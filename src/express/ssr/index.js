@@ -15,5 +15,5 @@ module.exports =
   isProd && htmlExists
     ? express.static(toDist())
     : (req, res) => {
-        res.sendFile(template);
+        res.status(500).sendFile(template);
       };
