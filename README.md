@@ -29,15 +29,15 @@ The chapters most thoroughly covered in this version are:
 
 Otherwise, in your terminal / command line, you can change into the directory where you'd like to install the repo and...
 
-1. clone the repo: `git clone https://github.com/nameer-rizvi/ssr_boilerplate.git`
+1. Clone the repo: `git clone https://github.com/nameer-rizvi/ssr_boilerplate.git`
 
-2. cd into the repo: `cd ssr_boilerplate/`
+2. Cd into the repo: `cd ssr_boilerplate/`
 
-3. remove the remote reference to origin OR set it to your new github repo: `git remote remove origin` OR `git remote set-url origin git://new.url.here`
+3. Remove the remote reference to origin OR set it to your new github repo: `git remote remove origin` OR `git remote set-url origin git://new.url.here`
 
-4. install all the required npm packages listed in package.json: `npm install`
+4. Install all the required npm packages listed in package.json: `npm install`
 
-5. start the dev server: `npm run dev`
+5. Start the dev server: `npm run dev`
 
 VOILA! Easy-peezy!
 
