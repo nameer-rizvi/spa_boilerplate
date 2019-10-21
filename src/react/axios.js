@@ -5,8 +5,10 @@ import { port, endpoint } from "../shared/index";
 export function get() {
   axios
     .get(encodeURI(api()))
-    .then(res => console.log("📟 [GET/SUCCESS]", res.data))
-    .catch(err => console.log("📟 [GET/ERROR]", err));
+    .then(res =>
+      console.log(`\n📟 [AXIOS/GET] [SUCCESS]\n\n${res.data.welcome}\n\n`)
+    )
+    .catch(err => console.log(`\n📟 [AXIOS/GET] [ERROR]\n\n${err}\n\n`));
 }
 
 function api() {

@@ -10,7 +10,9 @@ const isLocalhost = Boolean(
     )
 );
 
-const sw = "👷 service worker";
+const format = message => {
+  return `\n👷 [SERVICE WORKER]\n\nService worker ${message}.\n\n`;
+};
 
 export function register() {
   if (!isLocalhost && isProd && inNavigator) {
@@ -18,20 +20,20 @@ export function register() {
       navigator.serviceWorker
         .register("/service-worker.js")
         .then(registration => {
-          console.log(`${sw} registered.`);
+          console.log(format("registered"));
         })
         .catch(registrationError => {
-          console.log(`${sw} registration failed: `, registrationError);
+          console.log(format("registration failed"));
         });
     });
   } else if (isLocalhost) {
-    console.log(`${sw} not enabled for localhost.`);
+    console.log(format("not enabled for localhost"));
   } else if (!isProd) {
-    console.log(`${sw} only enabled for production.`);
+    console.log(format("only enabled for production"));
   } else if (!inNavigator) {
-    console.log(`${sw} not in navigator.`);
+    console.log(format("not in navigator"));
   } else {
-    console.log(`${sw} does not meet conditions for registration.`);
+    console.log(format("does not meet conditions for registration"));
   }
 }
 

@@ -18,12 +18,12 @@ export default class App extends Component {
   }
 
   state = {
-    Hello:
+    hello:
       "Babel's plugin-proposal-class-properties plugin allows the use of state/hooks!"
   };
 
   render() {
-    console.log("🗄️ [APP.JS/STATE]: ", this.state);
+    console.log(`\n🗄️ [APP/STATE]\n\n${this.state.hello}\n\n`);
     return (
       <ConnectedRouter history={history}>
         <Header />

@@ -41,7 +41,7 @@
       >.
     </h3>
     <p style="line-height: 20px;">
-      A temporary solution is to comment the line in /server/index.js that
+      A temporary solution is to comment the line in /src/server/index.js that
       contains 'app.use(historyApiFallback())'. You should then be able to hit
       the route and see the intended result. It is not recommended, but if done,
       please don't forget to uncomment the line before working on the front-end
@@ -49,11 +49,18 @@
       react-router for client-side-routing.
     </p>
     <p style="line-height: 20px;">
-      If you're on your local machine and you ran the script 'npm run demo', you
-      probably forgot to set the NODE_ENV to 'production'. To set your
-      environment variable, create a .env file in the project's root folder and
-      in it write 'NODE_ENV=production'. Once saved, you will need to exit the
-      server and start it again via npm script.
+      If you're on your local machine and you ran the script 'npm run demo', the
+      NODE_ENV needs to be set to 'production'. To set your environment
+      variable, create a .env file in the project's root folder and write
+      'NODE_ENV=production' in it. Once saved, you will need to exit the server
+      and start it again via npm script.
     </p>
+    <a
+      href="http://localhost:5001/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color: #ffffff;"
+      >Click here to open localhost on the client port.</a
+    >
   </body>
 </html>

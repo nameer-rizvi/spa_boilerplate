@@ -25,7 +25,7 @@
     "babel",
     "ssr"
   ],
-  "author": "Nameer Rizvi",
+  "author": "Nameer Rizvi <rizvinameer@gmail.com> (https://github.com/nameer-rizvi)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nameer-rizvi/ssr_boilerplate/issues"

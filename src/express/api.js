@@ -5,7 +5,7 @@ const isProd = require("../shared/index")["isProd"];
 
 router.use((req, res) => {
   const data = {
-    Welcome: `This has been fetched from the express server via api endpoint.${
+    welcome: `This has been fetched from the express server via axios, using the /api endpoint.${
       !isProd ? " You can find me at /src/express/api.js." : ""
     }`
   };
