@@ -24,6 +24,7 @@ module.exports = wp_isProd => {
     ],
     output: {
       path: path.toDist(),
+      publicPath: "/",
       filename: isProd ? "[name].[contenthash].js" : "[name].bundle.js"
     },
     optimization: {

@@ -10,42 +10,39 @@ const isLocalhost = Boolean(
     )
 );
 
-const logStatus = message => {
+const logStatus = status => {
   log({
     emoji: "👷",
     label: "[SERVICE WORKER]",
-    message: `Service worker ${message}`
+    message: `Service worker ${status}.`
   });
 };
 
 export function register() {
-  if (!isLocalhost && isProd && inNavigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/service-worker.js")
-        .then(registration => {
-          logStatus("registered");
-        })
-        .catch(registrationError => {
-          logStatus("registration failed");
-        });
-    });
-  } else if (isLocalhost) {
-    logStatus("not enabled for localhost");
-  } else if (!isProd) {
-    logStatus("only enabled for production");
-  } else if (!inNavigator) {
-    logStatus("not in navigator");
-  } else {
-    logStatus("does not meet conditions for registration");
-  }
+  !isLocalhost && isProd && inNavigator
+    ? window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(registration => {
+            logStatus("registered");
+          })
+          .catch(registrationError => {
+            logStatus("registration failed");
+          });
+      })
+    : isLocalhost
+    ? logStatus("not enabled for localhost")
+    : !isProd
+    ? logStatus("only enabled for production")
+    : !inNavigator
+    ? logStatus("not in navigator")
+    : logStatus("does not meet conditions for registration");
 }
 
 export function unregister() {
-  if (inNavigator) {
-    navigator.serviceWorker.ready.then(registration => {
+  inNavigator &&
+    (navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
-    });
-    logStatus("successfully unregistered");
-  }
+    }),
+    logStatus("successfully unregistered"));
 }
