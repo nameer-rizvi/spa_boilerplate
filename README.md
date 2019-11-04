@@ -10,14 +10,13 @@ There's already some shared settings included in the /src/shared/index.js file t
 
 ## Table of Contents
 
-- [Conception](#conception)
-- [Get Started](#get%20started)
-- [NPM Scripts](#npm%20scripts)
-- [Features](#features)
-
-* [React](#react)
-* [Express](#Express)
-* [Webpack](#Webpack)
+1. [Conception](#conception)
+2. [Get Started](#get%20started)
+3. [NPM Scripts](#npm%20scripts)
+4. [Features](#features)
+   1. [React](#react)
+   2. [Express](#Express)
+   3. [Webpack](#Webpack)
 
 ## Conception
 
@@ -36,7 +35,7 @@ The chapters most thoroughly covered in this version are:
 
 ## Get Started
 
-- If you have a github account, the "Use this template" option is available (the nice and green button above). This is the recommended method as it will easily transfer the boilerplate to your library of repo's without any further config.
+If you have a github account, the "Use this template" option is available (the nice and green button above). This is the recommended method as it will easily transfer the boilerplate to your library of repo's without any further config.
 
 Otherwise, in your terminal / command line:
 
@@ -115,7 +114,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - redux-devtools for the use of the extension on Chrome; and,
   - a root reducer with connectRouter added for routing purposes.
 - Service worker registration in production.
-- [Styled icons](https://styled-icons.js.org/).
+- [Styled components](https://www.styled-components.com/) and [styled icons](https://styled-icons.js.org/).
 
 ### Express
 
