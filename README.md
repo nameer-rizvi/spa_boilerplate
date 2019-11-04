@@ -1,4 +1,4 @@
-# SERVER-SIDE-RENDERING BABY
+# SERVER-SIDE-RENDERING BABY 👶
 
 Express server serving a react client via webpack middleware.
 
@@ -7,6 +7,17 @@ Express server serving a react client via webpack middleware.
 The app includes a shared folder that hosts anything (constants, functions, conditionals, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike create-react-app or gatsby, the app doesn't require a dirty ejection to share things between the client and server. Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
 There's already some shared settings included in the /src/shared/index.js file to demonstrate this, such as a simple share of the app name between the webpack html generator and the react app. Another example is the consolidated path file, so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware. There's also a logging function for consistent formatting across the app.
+
+## Table of Contents
+
+- [Conception](#conception)
+- [Get Started](#get%20started)
+- [NPM Scripts](#npm%20scripts)
+- [Features](#features)
+
+* [React](#react)
+* [Express](#Express)
+* [Webpack](#Webpack)
 
 ## Conception
 
@@ -38,7 +49,7 @@ $ npm install
 $ npm run dev
 ```
 
-VOILA! Easy-peezy!
+🎉
 
 ## NPM Scripts
 
@@ -82,6 +93,12 @@ _Recommended for viewing prod-version of app prior to deployment._
 
 - Scripts (see npm scripts section above).
 - Dotenv for use of environment variables.
+
+**Please note that environment variables aren't accessible in the front-end, for security reasons. [Create-react-app](https://create-react-app.dev/docs/adding-custom-environment-variables/) does an excellent job explaining why, but the gist of it is this:**
+
+> Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files.
+
+**If, for any reason, environment variables are required in the front-end, two recommended alternatives are webpack's [Environment Plugin](https://webpack.js.org/plugins/environment-plugin/) or the third-party [DotenvPlugin (dotenv-webpack)](https://github.com/mrsteele/dotenv-webpack).**
 
 ### React
 
