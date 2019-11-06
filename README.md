@@ -107,7 +107,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - [home page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/main/home.js);
   - [404 page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/main/404.js);
   - [sass stylesheet](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/style.scss);
-  - initial get function in [app.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/app.js) to fetch data (via axios) from the api endpoint; and,
+  - initial get function in [app.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/app.js) to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint; and,
   - sample state/hook in [app.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/app.js).
 - Redux, with a [store](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/redux/store.js) setup that includes:
   - [history](https://www.npmjs.com/package/history) + [connected-react-router](https://github.com/supasate/connected-react-router) for SPA routing;
