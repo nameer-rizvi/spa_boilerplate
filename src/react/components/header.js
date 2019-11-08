@@ -8,12 +8,14 @@ import { name } from "../../shared";
 function Header() {
   return (
     <header>
-      <Link
-        to="https://nameer-rizvi.github.io/ssr_boilerplate/"
+      <a
+        href="https://nameer-rizvi.github.io/ssr_boilerplate/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="logo"
       >
         {name}
-      </Link>
+      </a>
       <a
         href="https://github.com/nameer-rizvi/ssr_boilerplate"
         target="_blank"
