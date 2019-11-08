@@ -8,7 +8,10 @@ import { name } from "../../shared";
 function Header() {
   return (
     <header>
-      <Link to="/" className="logo">
+      <Link
+        to="https://nameer-rizvi.github.io/ssr_boilerplate/"
+        className="logo"
+      >
         {name}
       </Link>
       <a
