@@ -1,6 +1,3 @@
-// RULE: "ANYTHING" REQUIRED IN MORE THAN ONE FILE,
-// AND/OR IS A CONSTANT CONFIGUARATION SETTING GOES HERE.
-
 const port = process.env.PORT || 5000;
 const path = require("./path");
 const log = require("./log");
