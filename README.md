@@ -36,7 +36,7 @@ The chapters most thoroughly covered in this version are:
 
 ## Getting Started
 
-If you have a github account, the ["Use this template"](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) option is available (the nice and green button above). This is the recommended method as it will easily transfer the boilerplate to your library of repo's without any further config.
+If you have a github account, the [Use this template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) option is available (the nice and green button above). This is the recommended method as it will easily transfer the boilerplate to your library of repo's without any further config.
 
 Otherwise, in your terminal / command line:
 
