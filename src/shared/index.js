@@ -1,6 +1,6 @@
 const port = process.env.PORT || 5000;
-const path = require("./path");
 const log = require("./log");
+const path = require("./path");
 
 module.exports = {
   isProd: process.env.NODE_ENV === "production",
@@ -8,8 +8,8 @@ module.exports = {
     server: port,
     client: port + 1
   },
-  path: path,
-  log: log,
   endpoint: "/api",
-  name: "[app name]"
+  name: "[app name]",
+  log,
+  path
 };

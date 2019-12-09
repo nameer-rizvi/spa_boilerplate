@@ -9,7 +9,9 @@ module.exports = isProd => {
     meta: {
       viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
       "theme-color": "#ffffff",
-      description: "Express app serving react via webpack."
+      description: `Express app serving react via webpack.${
+        !isProd ? " You can find me at /src/webpack/html/index.js." : ""
+      }`
     },
     minify: isProd,
     hash: false,
