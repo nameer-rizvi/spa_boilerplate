@@ -1,4 +1,4 @@
-# SERVER-SIDE-RENDERING BABY 👶
+# SERVER SIDE RENDERING BOILERPLATE BABY 👶
 
 [Express](https://expressjs.com/) server serving a [react](https://reactjs.org/) client via [webpack](https://webpack.js.org/) middleware.
 

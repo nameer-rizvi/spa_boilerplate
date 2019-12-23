@@ -16,11 +16,11 @@ const log = shared["log"];
 const port = shared["port"]["server"];
 const env = process.env.NODE_ENV;
 
-// To set your environment variable, create a .env file
-// in the project's root folder and in it write
-// 'NODE_ENV=[environment name]'. Once saved, you will
-// probably be required to exit the server and
-// start it again via npm script.
+// To set your environment variable, create
+// a .env file in the project's root folder and
+// write 'NODE_ENV=production' in it. Once saved,
+// you will need to stop the server and restart
+// it via npm script.
 
 app.listen(port, () => {
   log({
