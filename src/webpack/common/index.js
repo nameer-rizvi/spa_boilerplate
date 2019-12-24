@@ -15,6 +15,9 @@ module.exports = wp_isProd => {
       app: path.toClient("/index.js")
     },
     devtool: isProd ? "source-map" : "inline-source-map",
+    externals: {
+      jsdom: "jsdom"
+    },
     plugins: pluginsConfig(isProd),
     output: outputConfig(isProd),
     module: moduleConfig(isProd),
