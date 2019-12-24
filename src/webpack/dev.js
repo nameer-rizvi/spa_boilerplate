@@ -1,6 +1,6 @@
 const merge = require("webpack-merge");
 
-const common = require("./common.js");
+const common = require("./common/index");
 const shared = require("../shared/index");
 const toDist = shared["path"]["toDist"];
 const port = shared["port"]["client"];
@@ -13,6 +13,10 @@ module.exports = merge(common(false), {
     hot: true,
     compress: true,
     port: port,
-    stats: "minimal"
+    stats: "minimal",
+    clientLogLevel: "none"
   }
 });
+
+// Create react app's webpack/dev configs:
+// https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/webpackDevServer.config.js
