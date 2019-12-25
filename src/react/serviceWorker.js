@@ -23,10 +23,10 @@ export function register() {
     ? window.addEventListener("load", () => {
         navigator.serviceWorker
           .register("/service-worker.js")
-          .then(registration => {
+          .then(() => {
             logStatus("registered");
           })
-          .catch(registrationError => {
+          .catch(() => {
             logStatus("registration failed");
           });
       })

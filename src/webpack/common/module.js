@@ -29,19 +29,19 @@ module.exports = isProd => {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
+        use: "file-loader"
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"]
+        use: "file-loader"
       },
       {
         test: /\.(csv|tsv)$/,
-        use: ["csv-loader"]
+        use: "csv-loader"
       },
       {
         test: /\.xml$/,
-        use: ["xml-loader"]
+        use: "xml-loader"
       }
     ]
   };

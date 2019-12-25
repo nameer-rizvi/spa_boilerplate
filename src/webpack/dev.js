@@ -2,6 +2,7 @@ const merge = require("webpack-merge");
 
 const common = require("./common/index");
 const shared = require("../shared/index");
+
 const toDist = shared["path"]["toDist"];
 const port = shared["port"]["client"];
 
@@ -15,6 +16,23 @@ module.exports = merge(common(false), {
     port: port,
     stats: "minimal",
     clientLogLevel: "none"
+  },
+  module: {
+    rules: [
+      {
+        enforce: "pre",
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "eslint-loader",
+          options: {
+            cache: true,
+            emitError: true,
+            emitWarning: true
+          }
+        }
+      }
+    ]
   }
 });
 

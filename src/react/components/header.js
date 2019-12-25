@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from "react";
 import { Github } from "styled-icons/icomoon/Github";
 
 import { name } from "../../shared";

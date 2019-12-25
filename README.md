@@ -53,6 +53,14 @@ $ npm run dev
 
 ## NPM Scripts
 
+`npm run lint`
+
+Run ESLint on all javascript files and return a report.
+
+_Recommended for maintaining code quality._
+
+**Though ESLint is enabled to run on webpack's dev servers, it won't catch syntax errors outside of the react app, as such, it is helpful to run lint throughout the app lest there be unknown errors in the express/shared/webpack folders.**
+
 `npm run wp-dev`
 
 Run webpack's dev server for hot-reload on changes in /client.
@@ -134,8 +142,9 @@ _Recommended for viewing prod-version of app prior to deployment._
   - Data: json, csv, tsv, xml.
 - [Dev server](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/webpack/dev.js) with the following settings:
   - [historyApiFallback](https://webpack.js.org/configuration/dev-server/#devserverhistoryapifallback) to allow SPA routing;
-  - [hot reloading](https://webpack.js.org/configuration/dev-server/#devserverhot); and,
-  - [file compression](https://webpack.js.org/configuration/dev-server/#devservercompress).
+  - [hot reloading](https://webpack.js.org/configuration/dev-server/#devserverhot),
+  - [file compression](https://webpack.js.org/configuration/dev-server/#devservercompress); and,
+  - [eslint](https://eslint.org/).
 - [Source-mapping](https://webpack.js.org/configuration/devtool/).
 - [SplitChunks](https://webpack.js.org/plugins/split-chunks-plugin/) (vendors) for optimization.
 - File name hashing in production.
