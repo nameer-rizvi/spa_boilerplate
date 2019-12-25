@@ -59,7 +59,7 @@ Run ESLint on all javascript files and return a report on syntax warnings/errors
 
 _Recommended for maintaining code quality._
 
-**Though ESLint is enabled to run on webpack's dev servers, it won't catch syntax errors outside of the react app, as such, it is helpful to run lint throughout the app lest there be unknown errors in the express/shared/webpack folders.**
+**Though ESLint is enabled to run on webpack's dev server, it won't catch syntax errors outside of the react app, as such, it is helpful to run lint throughout the app lest there be unknown errors in the express/shared/webpack folders.**
 
 `npm run wp-dev`
 
