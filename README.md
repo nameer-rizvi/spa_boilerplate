@@ -55,7 +55,7 @@ $ npm run dev
 
 `npm run lint`
 
-Run ESLint on all javascript files and return a report.
+Run ESLint on all javascript files and return a report on syntax warnings/errors.
 
 _Recommended for maintaining code quality._
 

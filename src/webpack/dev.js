@@ -26,9 +26,7 @@ module.exports = merge(common(false), {
         use: {
           loader: "eslint-loader",
           options: {
-            cache: true,
-            emitError: true,
-            emitWarning: true
+            cache: true
           }
         }
       }

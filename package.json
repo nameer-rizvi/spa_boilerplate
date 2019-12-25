@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js",
-    "wp-dev": "cd src/webpack/dev && webpack-dev-server --open --config index.js",
+    "wp-dev": "cd src/webpack && webpack-dev-server --open --config dev.js",
     "server": "nodemon src/express/index.js",
     "dev": "concurrently \"npm run server\" \"npm run wp-dev\"",
     "build": "cd src/webpack && webpack --config prod.js",
