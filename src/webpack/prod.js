@@ -56,7 +56,7 @@ module.exports = merge(common(true), {
           destination: path.join("icons", "ios")
         }
       ],
-      start_url: "/index.html",
+      start_url: "/",
       display: "standalone",
       orientation: "omit",
       theme_color: shared.themeColor,
