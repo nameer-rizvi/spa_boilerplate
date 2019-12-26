@@ -1,3 +1,5 @@
+const shared = require("./src/shared/index").eslint;
+
 module.exports = {
   env: {
     browser: true,
@@ -18,12 +20,12 @@ module.exports = {
   },
   parser: "babel-eslint",
   plugins: ["react"],
-  rules: { "react/prop-types": 0, "react/display-name": 0 },
   settings: {
     react: {
       version: "detect"
     }
-  }
+  },
+  ...shared
 };
 
 // Create react app's eslint config:

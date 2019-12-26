@@ -5,6 +5,7 @@ const shared = require("../shared/index");
 
 const toDist = shared["path"]["toDist"];
 const port = shared["port"]["client"];
+const eslint = shared["eslint"];
 
 module.exports = merge(common(false), {
   mode: "development",
@@ -26,7 +27,8 @@ module.exports = merge(common(false), {
         use: {
           loader: "eslint-loader",
           options: {
-            cache: true
+            cache: true,
+            ...eslint
           }
         }
       }
