@@ -57,4 +57,3 @@ function keywords() {
 // Html-webpack-plugin:
 // - https://github.com/jantimon/html-webpack-plugin
 // - https://github.com/jantimon/html-webpack-plugin#Plugins
-// Favicon generator: https://favicon.io/
