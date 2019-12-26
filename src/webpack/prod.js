@@ -6,14 +6,6 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const common = require("./common/index");
 const shared = require("../shared/index");
 
-const {
-  name,
-  description,
-  themeColor,
-  backgroundColor,
-  path: toFavicon
-} = shared;
-
 module.exports = merge(common(true), {
   mode: "production",
   plugins: [
@@ -24,21 +16,21 @@ module.exports = merge(common(true), {
     }),
     new ManifestPlugin({ fileName: "asset-manifest.json" }),
     new WebpackPwaManifest({
-      short_name: name,
-      name,
-      description,
+      short_name: shared.name,
+      name: shared.name,
+      description: shared.description,
       icons: [
         {
-          src: toFavicon,
-          sizes: [72, 48, 24],
+          src: shared.path.toFavicon(),
+          sizes: "48x48",
           ios: "startup"
         }
       ],
       start_url: ".",
       display: "standalone",
       orientation: "omit",
-      theme_color: themeColor,
-      background_color: backgroundColor
+      theme_color: shared.themeColor,
+      background_color: shared.backgroundColor
     })
   ]
 });
