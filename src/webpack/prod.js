@@ -38,5 +38,7 @@ module.exports = merge(common(true), {
   ]
 });
 
+// Webpack pwa manifest:
+// https://github.com/arthurbergmz/webpack-pwa-manifest
 // Create react app's manifest.json:
 // https://github.com/react-cosmos/create-react-app-example/blob/master/public/manifest.json
