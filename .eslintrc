@@ -11,7 +11,8 @@
   },
   "plugins": ["react"],
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "rules": { "react/prop-types": 0, "react/display-name": 0 }
 }
 
 // Create react app's eslint config:
