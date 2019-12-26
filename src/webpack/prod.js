@@ -1,11 +1,18 @@
 const merge = require("webpack-merge");
-const path = require("path");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 const common = require("./common/index");
-const name = require("../shared/index").name;
+const shared = require("../shared/index");
+
+const {
+  name,
+  description,
+  themeColor,
+  backgroundColor,
+  path: toFavicon
+} = shared;
 
 module.exports = merge(common(true), {
   mode: "production",
@@ -18,22 +25,20 @@ module.exports = merge(common(true), {
     new ManifestPlugin({ fileName: "asset-manifest.json" }),
     new WebpackPwaManifest({
       short_name: name,
-      name: name,
-      description:
-        "Express server serving a react client via webpack middleware.",
+      name,
+      description,
       icons: [
         {
-          src: path.resolve(__dirname, "common/html/favicon.ico"),
-          sizes: "48x48"
+          src: toFavicon,
+          sizes: [72, 48, 24],
+          ios: "startup"
         }
       ],
       start_url: ".",
       display: "standalone",
       orientation: "omit",
-      // theme_color & background_color should be
-      // consistent with styling in the react app.
-      theme_color: "#ffffff",
-      background_color: "#20232a"
+      theme_color: themeColor,
+      background_color: backgroundColor
     })
   ]
 });

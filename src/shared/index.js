@@ -1,5 +1,4 @@
 const port = process.env.PORT || 5000;
-const eslint = require("./eslint");
 const log = require("./log");
 const path = require("./path");
 
@@ -11,7 +10,12 @@ module.exports = {
   },
   endpoint: "/api",
   name: "[app name]",
-  eslint,
+  description: "Express server serving a react client via webpack middleware.",
+  // Colors should be consistent with
+  // styling in the react app.
+  themeColor: "#ffffff",
+  backgroundColor: "#20232a",
+  eslint: { rules: { "react/prop-types": 0, "react/display-name": 0 } },
   log,
   path
 };

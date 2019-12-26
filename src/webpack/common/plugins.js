@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // uncomment if using moment.js
 // const IgnorePlugin = require("webpack").IgnorePlugin;
 
-const html = require("./html/index");
+const html = require("./html");
 
 module.exports = isProd => {
   return [
