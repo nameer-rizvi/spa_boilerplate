@@ -29,6 +29,7 @@ module.exports = merge(common(true), {
       ],
       start_url: ".",
       display: "standalone",
+      orientation: "omit",
       // theme_color & background_color should be
       // consistent with styling in the react app.
       theme_color: "#ffffff",

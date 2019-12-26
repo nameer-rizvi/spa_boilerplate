@@ -150,3 +150,4 @@ _Recommended for viewing prod-version of app prior to deployment._
 - File name hashing in production.
 - Plugin for generating [service worker](https://webpack.js.org/guides/progressive-web-application/) in production.
 - [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/) for generating an html template (favicon included).
+- [Manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest) in production for PWA capabilities.
