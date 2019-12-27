@@ -9,7 +9,12 @@ const app = express();
 
 app.use(cors());
 app.use(helmet());
-app.use(historyApiFallback());
+app.use(
+  historyApiFallback({
+    disableDotRule: true,
+    htmlAcceptHeaders: ["text/html", "application/xhtml+xml"]
+  })
+);
 
 const shared = require("../shared/index");
 const log = shared["log"];

@@ -11,7 +11,7 @@ module.exports = merge(common(false), {
   mode: "development",
   devServer: {
     contentBase: toDist(),
-    historyApiFallback: true,
+    historyApiFallback: { disableDotRule: true },
     hot: true,
     compress: true,
     port: port,
@@ -35,6 +35,9 @@ module.exports = merge(common(false), {
     ]
   }
 });
+
+// Webpack's dev server options:
+// https://webpack.js.org/configuration/dev-server/
 
 // Create react app's webpack/dev configs:
 // https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/webpackDevServer.config.js
