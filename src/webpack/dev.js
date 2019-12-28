@@ -16,7 +16,7 @@ module.exports = merge(common(false), {
     compress: true,
     port: port,
     stats: "minimal",
-    clientLogLevel: "none"
+    clientLogLevel: "error"
   },
   module: {
     rules: [
