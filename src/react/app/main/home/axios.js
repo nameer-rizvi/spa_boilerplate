@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { port, endpoint, log } from "../shared/index";
+import { port, endpoint, log } from "../../../../shared/index";
 
 export function get() {
   axios

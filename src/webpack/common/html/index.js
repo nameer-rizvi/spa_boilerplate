@@ -4,6 +4,7 @@ const meta = require("./meta/index");
 module.exports = isProd => {
   const {
     name,
+    author,
     themeColor,
     description,
     path: { toFavicon }
@@ -11,8 +12,8 @@ module.exports = isProd => {
 
   return {
     title: name,
-    meta: meta(themeColor, description, isProd, name, toFavicon),
-    favicon: toFavicon(),
+    meta: meta({ author, description, isProd, themeColor, name, toFavicon }),
+    favicon: toFavicon,
     minify: isProd,
     hash: false,
     cache: true

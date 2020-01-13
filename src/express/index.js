@@ -9,6 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(helmet());
+
 app.use(
   historyApiFallback({
     disableDotRule: true,
@@ -26,6 +27,8 @@ const env = process.env.NODE_ENV;
 // write 'NODE_ENV=production' in it. Once saved,
 // you will need to stop the server and restart
 // it via npm script.
+
+// https://www.npmjs.com/package/dotenv
 
 app.listen(port, () => {
   log({

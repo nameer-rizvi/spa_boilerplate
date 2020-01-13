@@ -10,11 +10,11 @@ const eslint = shared["eslint"];
 module.exports = merge(common(false), {
   mode: "development",
   devServer: {
+    port,
     contentBase: toDist(),
     historyApiFallback: { disableDotRule: true },
     hot: true,
     compress: true,
-    port: port,
     stats: "minimal",
     clientLogLevel: "error"
   },
@@ -36,8 +36,12 @@ module.exports = merge(common(false), {
   }
 });
 
-// Webpack's dev server options:
+// If required to open devServer on a url
+// other than "/", add this to devServer :
+// openPage: "/search"
+
+// Webpack's dev server documentation:
 // https://webpack.js.org/configuration/dev-server/
 
-// Create react app's webpack/dev configs:
+// Create-react-app's webpack dev server config:
 // https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/webpackDevServer.config.js

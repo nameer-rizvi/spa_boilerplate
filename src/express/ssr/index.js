@@ -4,7 +4,7 @@ const toHtml = shared["path"]["toHtml"];
 const toDist = shared["path"]["toDist"];
 
 const fs = require("fs");
-const htmlExists = fs.existsSync(toHtml());
+const htmlExists = fs.existsSync(toHtml);
 
 const express = require("express");
 
