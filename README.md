@@ -122,7 +122,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - [redux-thunk](https://www.npmjs.com/package/redux-thunk) + [redux-promise](https://www.npmjs.com/package/redux-promise-middleware) for creating api middleware;
   - [redux-devtools](https://github.com/zalmoxisus/redux-devtools-extension) for the use of the [extension on Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en); and,
   - a [root reducer](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/redux/reducer.js) with connectRouter added for routing purposes.
-- [Service worker]https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/serviceWorker.js) registration in production.
+- [Service worker](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/serviceWorker.js) registration in production.
 - [Styled components](https://www.styled-components.com/) and [styled icons](https://styled-icons.js.org/).
 
 ### Express
