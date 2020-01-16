@@ -4,9 +4,9 @@
 
 ### 100% Control [THE HOT SAUCE]
 
-The app includes a [shared folder](https://github.com/nameer-rizvi/ssr_boilerplate/tree/master/src/shared) that hosts anything (constants, functions, middleware, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike [create-react-app](https://github.com/facebook/create-react-app) or [gatsby](https://www.gatsbyjs.org/), the app doesn't require a dirty ejection to share things between the client and server ([Adam Laycock explains why ejecting can be 🆖](https://medium.com/curated-by-versett/dont-eject-your-create-react-app-b123c5247741)). Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
+The app includes a [shared folder](https://github.com/nameer-rizvi/ssr_boilerplate/tree/develop/src/shared) that hosts anything (constants, functions, middleware, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike [create-react-app](https://github.com/facebook/create-react-app) or [gatsby](https://www.gatsbyjs.org/), the app doesn't require a dirty ejection to share things between the client and server ([Adam Laycock explains why ejecting can be 🆖](https://medium.com/curated-by-versett/dont-eject-your-create-react-app-b123c5247741)). Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
-There's already some settings included in the [shared index file](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/shared/index.js) to demonstrate this, such as a simple share of the app name between the [webpack html generator](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/webpack/html/index.js) and the [react header component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/header.js). Another example is the [consolidated path file](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/shared/path.js), so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware. There's also a [logging function](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/shared/log.js) for consistent formatting across the app.
+There's already some settings included in the [shared index file](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/shared/index.js) to demonstrate this, such as a simple share of the app name between the [webpack html generator](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/webpack/common/html/index.js) and the [react header component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/header.js). Another example is the [consolidated path file](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/shared/path.js), so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware. There's also a [logging function](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/shared/log.js) for consistent formatting across the app.
 
 ## Table of Contents
 
@@ -111,26 +111,26 @@ _Recommended for viewing prod-version of app prior to deployment._
 ### React
 
 - Starters include:
-  - [header component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/header.js);
-  - [home page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/main/home.js);
-  - [404 page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/components/main/404.js);
-  - [sass stylesheet](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/style.scss);
-  - initial get function in [/home/index.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/app/main/home/index.js) to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint; and,
-  - sample state/hook in [/home/index.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/app/main/home/index.js).
-- Redux, with a [store](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/redux/store.js) setup that includes:
+  - [header component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/header.js);
+  - [home page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/main/home/index.js);
+  - [404 page component](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/main/404.js);
+  - [sass stylesheet](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/style.scss);
+  - initial get function in [/home/axios.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/main/home/axios.js) to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint; and,
+  - sample state/hook in [/home/index.js](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/app/main/home/index.js).
+- Redux, with a [store](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/redux/store.js) setup that includes:
   - [history](https://www.npmjs.com/package/history) + [connected-react-router](https://github.com/supasate/connected-react-router) for SPA routing;
   - [redux-thunk](https://www.npmjs.com/package/redux-thunk) + [redux-promise](https://www.npmjs.com/package/redux-promise-middleware) for creating api middleware;
   - [redux-devtools](https://github.com/zalmoxisus/redux-devtools-extension) for the use of the [extension on Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en); and,
-  - a [root reducer](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/redux/reducer.js) with connectRouter added for routing purposes.
-- [Service worker](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/react/serviceWorker.js) registration in production.
+  - a [root reducer](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/redux/reducer.js) with connectRouter added for routing purposes.
+- [Service worker]https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/react/serviceWorker.js) registration in production.
 - [Styled components](https://www.styled-components.com/) and [styled icons](https://styled-icons.js.org/).
 
 ### Express
 
 - Basic security packages: [cors](https://www.npmjs.com/package/cors), [helmet](https://www.npmjs.com/package/helmet).
 - [HistoryApiFallback](https://www.npmjs.com/package/connect-history-api-fallback) to allow SPA routing.
-- Ready-to-use [api route (“/api”)](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/express/api.js) with pre-filled dummy data.
-- [SSR middleware](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/express/ssr/index.js) that correctly renders client depending on environment.
+- Ready-to-use [api route (“/api”)](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/express/api.js) with pre-filled dummy data.
+- [SSR middleware](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/express/ssr/index.js) that correctly renders client depending on environment.
 
 ### Webpack
 
@@ -140,7 +140,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - Images: png, svg, jpg, gif;
   - Fonts: woff, woff2, eot, ttf, otf; and,
   - Data: json, csv, tsv, xml.
-- [Dev server](https://github.com/nameer-rizvi/ssr_boilerplate/blob/master/src/webpack/dev.js) with the following settings:
+- [Dev server](https://github.com/nameer-rizvi/ssr_boilerplate/blob/develop/src/webpack/dev.js) with the following settings:
   - [historyApiFallback](https://webpack.js.org/configuration/dev-server/#devserverhistoryapifallback) to allow SPA routing;
   - [hot reloading](https://webpack.js.org/configuration/dev-server/#devserverhot),
   - [file compression](https://webpack.js.org/configuration/dev-server/#devservercompress); and,
