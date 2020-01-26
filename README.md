@@ -59,7 +59,7 @@ Run ESLint on all javascript files and return a report on syntax warnings/errors
 
 _Recommended for maintaining code quality._
 
-**Though ESLint is enabled to run on webpack's dev server, it won't catch syntax errors outside of the react app, as such, it is helpful to run lint throughout the app lest there be unknown errors in the express/shared/webpack folders.**
+**Though ESLint is enabled to run on webpack's dev server, it won't catch syntax errors outside of the react app, as such, it is helpful to run lint throughout the app lest there be unknown errors in the express, shared, or webpack folders.**
 
 `npm run wp-dev`
 
@@ -93,7 +93,7 @@ Start express server using node and serve static assets in /dist via index.html.
 
 _Recommended for viewing prod-version of app prior to deployment._
 
-**If the cloud platform you choose to deploy with doesn't already read the 'build' and/or 'start' scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start". Also, don't forget to change or set the NODE_ENV to "production" either through the platform's GUI or console before deployment.**
+**If the cloud platform you choose to deploy with doesn't already read the 'build' and/or 'start' scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start". Also, don't forget to change or set the NODE_ENV to "production" either through the platform's GUI or console prior to deployment.**
 
 ## Features
 
