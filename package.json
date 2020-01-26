@@ -24,7 +24,7 @@
     "redux",
     "webpack",
     "babel",
-    "ssr"
+    "spa"
   ],
   "author": "Nameer Rizvi <rizvinameer@gmail.com> (https://github.com/nameer-rizvi)",
   "license": "ISC",
