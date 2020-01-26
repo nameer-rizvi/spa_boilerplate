@@ -1,5 +1,5 @@
 {
-  "name": "ssr_boilerplate",
+  "name": "spa_boilerplate",
   "version": "1.0.0",
   "description": "Express server serving a react client via webpack middleware.",
   "main": "/src/express/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nameer-rizvi/ssr_boilerplate.git"
+    "url": "git+https://github.com/nameer-rizvi/spa_boilerplate.git"
   },
   "keywords": [
     "node",
@@ -29,12 +29,12 @@
   "author": "Nameer Rizvi <rizvinameer@gmail.com> (https://github.com/nameer-rizvi)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nameer-rizvi/ssr_boilerplate/issues"
+    "url": "https://github.com/nameer-rizvi/spa_boilerplate/issues"
   },
   "engines": {
     "node": "10.x"
   },
-  "homepage": "https://github.com/nameer-rizvi/ssr_boilerplate#readme",
+  "homepage": "https://github.com/nameer-rizvi/spa_boilerplate#readme",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",

@@ -7,7 +7,7 @@ function Header() {
   return (
     <header>
       <a
-        href="https://nameer-rizvi.github.io/ssr_boilerplate/"
+        href="https://nameer-rizvi.github.io/spa_boilerplate/"
         target="_blank"
         rel="noopener noreferrer"
         className="logo"
@@ -15,7 +15,7 @@ function Header() {
         {name}
       </a>
       <a
-        href="https://github.com/nameer-rizvi/ssr_boilerplate"
+        href="https://github.com/nameer-rizvi/spa_boilerplate"
         target="_blank"
         rel="noopener noreferrer"
         className="logo hover-underline"

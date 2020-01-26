@@ -12,8 +12,8 @@ module.exports = () => {
     "boilerplate",
     "boilerplate-template",
     "boilerplate-application",
-    "server-side-rendering",
-    "ssr"
+    "single-page-application",
+    "spa"
   ];
 
   return arr.join(",");

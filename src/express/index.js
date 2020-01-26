@@ -40,7 +40,7 @@ app.listen(port, () => {
 
 const endpoint = shared["endpoint"];
 const api = require("./api");
-const ssr = require("./ssr/index");
+const spa = require("./spa/index");
 
 app.use(endpoint, api);
-app.use(ssr);
+app.use(spa);

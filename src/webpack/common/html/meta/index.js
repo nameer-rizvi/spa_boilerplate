@@ -11,7 +11,7 @@ module.exports = props => {
     keywords: keywords(),
     "theme-color": themeColor,
     "og:type": "website",
-    "og:url": "https://ssr-boilerplate1.herokuapp.com/",
+    "og:url": "https://spa-boilerplate.herokuapp.com/",
     "od:site_name": name,
     "og:title": name,
     "og:description": description,
