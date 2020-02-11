@@ -5,7 +5,21 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 const common = require("./common/index");
-const shared = require("../shared/index");
+
+const {
+  name,
+  description,
+  themeColor,
+  backgroundColor,
+  path: {
+    toFavicon16,
+    toFavicon32,
+    toFavicon,
+    toFavicon192,
+    toFavicon512,
+    toFaviconApple
+  }
+} = require("../shared/index");
 
 module.exports = merge(common(true), {
   mode: "production",
@@ -17,50 +31,50 @@ module.exports = merge(common(true), {
     }),
     new ManifestPlugin({ fileName: "asset-manifest.json" }),
     new WebpackPwaManifest({
-      short_name: shared.name,
-      name: shared.name,
-      description: shared.description,
+      name,
+      description,
+      short_name: name,
+      start_url: "/",
+      display: "standalone",
+      orientation: "omit",
+      theme_color: themeColor,
+      background_color: backgroundColor,
       icons: [
         {
-          src: shared.path.toFavicon16,
+          src: toFavicon16,
           sizes: "16x16",
           type: "image/png"
         },
         {
-          src: shared.path.toFavicon32,
+          src: toFavicon32,
           sizes: "32x32",
           type: "image/png"
         },
         {
-          src: shared.path.toFavicon,
+          src: toFavicon,
           sizes: "48x48",
           type: "image/x-icon"
         },
         {
-          src: shared.path.toFavicon192,
+          src: toFavicon192,
           sizes: "192x192",
           type: "image/png",
           destination: path.join("icons", "android")
         },
         {
-          src: shared.path.toFavicon512,
+          src: toFavicon512,
           sizes: "512x512",
           type: "image/png",
           destination: path.join("icons", "android")
         },
         {
-          src: shared.path.toFaviconApple,
+          src: toFaviconApple,
           sizes: "180x180",
           type: "image/png",
           ios: "startup",
           destination: path.join("icons", "ios")
         }
-      ],
-      start_url: "/",
-      display: "standalone",
-      orientation: "omit",
-      theme_color: shared.themeColor,
-      background_color: shared.backgroundColor
+      ]
     })
   ]
 });

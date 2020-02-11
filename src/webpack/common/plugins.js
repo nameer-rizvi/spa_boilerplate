@@ -2,7 +2,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const html = require("./html/index");
+const html = require("./html");
 
 module.exports = isProd => {
   return [

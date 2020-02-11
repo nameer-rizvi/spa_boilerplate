@@ -1,7 +1,7 @@
-const shared = require("../../shared/index");
-const isProd = shared["isProd"];
-const toHtml = shared["path"]["toHtml"];
-const toDist = shared["path"]["toDist"];
+const {
+  isProd,
+  path: { toHtml, toDist }
+} = require("../../shared/index");
 
 const fs = require("fs");
 const htmlExists = fs.existsSync(toHtml);

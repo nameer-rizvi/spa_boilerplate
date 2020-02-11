@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const isProd = require("../shared/index")["isProd"];
+const { isProd } = require("../shared/index");
 
 router.use((req, res) => {
   const data = {

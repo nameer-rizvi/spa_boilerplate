@@ -3,14 +3,16 @@ const merge = require("webpack-merge");
 const common = require("./common/index");
 const shared = require("../shared/index");
 
-const toDist = shared["path"]["toDist"];
-const port = shared["port"]["client"];
-const eslint = shared["eslint"];
+const {
+  path: { toDist },
+  port: { client },
+  eslint
+} = shared;
 
 module.exports = merge(common(false), {
   mode: "development",
   devServer: {
-    port,
+    port: client,
     contentBase: toDist(),
     historyApiFallback: { disableDotRule: true },
     hot: true,

@@ -36,21 +36,21 @@
   },
   "homepage": "https://github.com/nameer-rizvi/spa_boilerplate#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.7.4",
     "axios": "^0.19.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
-    "connected-react-router": "^6.6.1",
+    "connected-react-router": "^6.7.0",
     "css-loader": "^3.4.0",
     "csv-loader": "^3.0.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.18.3",
     "file-loader": "^4.3.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.2",
@@ -71,10 +71,10 @@
     "styled-components": "^4.4.1",
     "styled-icons": "^8.6.0",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1",
+    "webpack-dev-server": "^3.10.3",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-merge": "^4.2.2",
-    "webpack-pwa-manifest": "^4.1.1",
+    "webpack-pwa-manifest": "^4.2.0",
     "workbox-webpack-plugin": "^4.3.1",
     "xml-loader": "^1.2.1"
   },
@@ -87,6 +87,6 @@
     "helmet": "^3.21.2",
     "history": "^4.10.1",
     "path": "^0.12.7",
-    "webpack": "^4.41.4"
+    "webpack": "^4.41.6"
   }
 }

@@ -17,9 +17,6 @@ app.use(
   })
 );
 
-const shared = require("../shared/index");
-const log = shared["log"];
-const port = shared["port"]["server"];
 const env = process.env.NODE_ENV;
 
 // To set your environment variable, create
@@ -30,6 +27,12 @@ const env = process.env.NODE_ENV;
 
 // https://www.npmjs.com/package/dotenv
 
+const {
+  log,
+  endpoint,
+  port: { server: port }
+} = require("../shared/index");
+
 app.listen(port, () => {
   log({
     emoji: "🚀",
@@ -38,7 +41,6 @@ app.listen(port, () => {
   });
 });
 
-const endpoint = shared["endpoint"];
 const api = require("./api");
 const spa = require("./spa/index");
 
