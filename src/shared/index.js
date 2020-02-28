@@ -4,10 +4,7 @@ const path = require("./path");
 
 module.exports = {
   isProd: process.env.NODE_ENV === "production",
-  port: {
-    server: port,
-    client: port + 1
-  },
+  port: { server: port, client: port + 1 },
   endpoint: "/api",
   name: "[app name]",
   description: "Express server serving a react client via webpack middleware.",

@@ -10,13 +10,12 @@ const isLocalhost = Boolean(
     )
 );
 
-const logStatus = status => {
+const logStatus = status =>
   log({
     emoji: "👷",
     label: "[SERVICE WORKER]",
     message: `Service worker ${status}.`
   });
-};
 
 export function register() {
   isLocalhost
@@ -28,19 +27,15 @@ export function register() {
     : window.addEventListener("load", () => {
         navigator.serviceWorker
           .register("/service-worker.js")
-          .then(() => {
-            logStatus("registered");
-          })
-          .catch(() => {
-            logStatus("registration failed");
-          });
+          .then(() => logStatus("registered"))
+          .catch(() => logStatus("registration failed"));
       });
 }
 
 export function unregister() {
   inNavigator &&
-    (navigator.serviceWorker.ready.then(registration => {
-      registration.unregister();
-    }),
+    (navigator.serviceWorker.ready.then(registration =>
+      registration.unregister()
+    ),
     logStatus("successfully unregistered"));
 }

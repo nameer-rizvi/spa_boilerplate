@@ -4,22 +4,18 @@ import { Github } from "styled-icons/icomoon/Github";
 import { name } from "../../shared";
 
 function Header() {
+  const props = {
+    href: "https://github.com/nameer-rizvi/spa_boilerplate",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  };
+
   return (
     <header>
-      <a
-        href="https://nameer-rizvi.github.io/spa_boilerplate/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="logo"
-      >
+      <a {...props} className="logo">
         {name}
       </a>
-      <a
-        href="https://github.com/nameer-rizvi/spa_boilerplate"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="logo hover-underline"
-      >
+      <a {...props} className="logo hover-underline">
         <Github style={{ height: "30px", width: "30px" }} />
       </a>
     </header>

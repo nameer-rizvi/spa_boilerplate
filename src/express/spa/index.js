@@ -14,6 +14,4 @@ const template = path.join(__dirname + "/template.html");
 module.exports =
   isProd && htmlExists
     ? express.static(toDist())
-    : (req, res) => {
-        res.status(404).sendFile(template);
-      };
+    : (req, res) => res.status(404).sendFile(template);
