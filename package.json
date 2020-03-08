@@ -87,6 +87,7 @@
     "helmet": "^3.21.3",
     "history": "^4.10.1",
     "immutable": "^3.8.2",
+    "logti": "^1.0.1",
     "path": "^0.12.7",
     "seamless-immutable": "^7.1.4",
     "webpack": "^4.41.6"

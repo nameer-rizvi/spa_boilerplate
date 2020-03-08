@@ -1,21 +1,21 @@
 import React, { Fragment, useState, useEffect } from "react";
 
+import logti from "logti";
+
 import { get } from "./axios";
 
-import { log, isProd } from "../../../../shared";
+import { isProd } from "../../../../shared";
 
 function HomePage() {
   useEffect(() => {
     get();
   }, []);
 
-  const [welcome] = useState({
-    emoji: "🤓",
-    label: "[REACT HOOKS]",
-    message: "This message has been fetched from react useState()."
-  });
+  const [welcome] = useState(
+    "🤓 This message has been fetched from react useState()."
+  );
 
-  log(welcome);
+  logti(welcome);
 
   return isProd ? (
     <Fragment>

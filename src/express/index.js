@@ -28,18 +28,15 @@ const env = process.env.NODE_ENV;
 // https://www.npmjs.com/package/dotenv
 
 const {
-  log,
   endpoint,
   port: { server: port }
 } = require("../shared/index");
 
-app.listen(port, () => {
-  log({
-    emoji: "🚀",
-    label: "[EXPRESS]",
-    message: `Server listening on port ${port} in ${env} environment.`
-  });
-});
+const logti = require("logti");
+
+app.listen(port, () =>
+  logti(`🚀 Express server listening on port ${port} in ${env} environment.`)
+);
 
 const api = require("./api");
 const spa = require("./spa/index");

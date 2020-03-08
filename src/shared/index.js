@@ -1,5 +1,4 @@
 const port = process.env.PORT || 5000;
-const log = require("./log");
 const path = require("./path");
 
 module.exports = {
@@ -13,6 +12,5 @@ module.exports = {
   themeColor: "#ffffff",
   backgroundColor: "#20232a",
   eslint: { rules: { "react/prop-types": 0, "react/display-name": 0 } },
-  log,
   path
 };

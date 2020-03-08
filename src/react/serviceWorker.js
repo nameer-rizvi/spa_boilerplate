@@ -1,4 +1,6 @@
-import { isProd, log } from "../shared/index";
+import logti from "logti";
+
+import { isProd } from "../shared/index";
 
 const inNavigator = "serviceWorker" in navigator;
 
@@ -10,12 +12,7 @@ const isLocalhost = Boolean(
     )
 );
 
-const logStatus = status =>
-  log({
-    emoji: "👷",
-    label: "[SERVICE WORKER]",
-    message: `Service worker ${status}.`
-  });
+const logStatus = status => logti(`👷 Service worker ${status}.`);
 
 export function register() {
   isLocalhost
