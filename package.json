@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run wp-dev\"",
     "build": "cd src/webpack && webpack --config prod.js",
     "start": "NODE_ENV=production node src/express/index.js",
-    "demo": "npm run build && npm run start"
+    "app": "npm run build && npm run start"
   },
   "repository": {
     "type": "git",
