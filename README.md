@@ -85,7 +85,7 @@ Bundle /client into /dist with an index.html.
 
 Start express production server using node.
 
-`npm run demo`
+`npm run app`
 
 Start express server using node and serve static assets in /dist via index.html. NOTE: NODE_ENV must be set to production before running script to view app.
 
