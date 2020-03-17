@@ -1,12 +1,16 @@
 import React, { Fragment, useState, useEffect } from "react";
+import axios from "axios";
+import proxy from "../setup/proxy";
 import { Github } from "styled-icons/icomoon/Github";
 import logti from "logti";
-import get from "./proxy";
 import { isProd } from "../../shared";
 
 function Page() {
   useEffect(() => {
-    get();
+    axios
+      .get(proxy())
+      .then(res => logti(`📟 ${res.data.welcome}`))
+      .catch(err => logti(err));
   }, []);
 
   const [welcome] = useState(
