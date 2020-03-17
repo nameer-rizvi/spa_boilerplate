@@ -12,7 +12,7 @@ function App() {
   return (
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path={"/"} component={Page} />
+        <Route component={Page} />
       </Switch>
     </ConnectedRouter>
   );
