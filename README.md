@@ -111,7 +111,7 @@ _Recommended for viewing prod-version of app prior to deployment._
 - Starters include:
   - [page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/page.js);
   - [sass stylesheet](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/style.scss);
-  - initial get function in [page.js](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/proxy.js) to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint.
+  - initial [get function](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/proxy.js) in page.js to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint.
 - Redux, with a [store](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/setup/store.js) setup that includes:
   - [history](https://www.npmjs.com/package/history) + [connected-react-router](https://github.com/supasate/connected-react-router) for SPA routing;
   - [redux-thunk](https://www.npmjs.com/package/redux-thunk) + [redux-promise](https://www.npmjs.com/package/redux-promise-middleware) for creating api middleware;
