@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import proxy from "../setup/proxy";
 import { Github } from "styled-icons/icomoon/Github";
 import logti from "logti";
 import { isProd } from "../../shared";
@@ -8,7 +7,7 @@ import { isProd } from "../../shared";
 function Page() {
   useEffect(() => {
     axios
-      .get(proxy())
+      .get()
       .then(res => logti(`📟 ${res.data.welcome}`))
       .catch(err => logti(err));
   }, []);

@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./setup/store";
 import App from "./app/index";
 import * as serviceWorker from "./setup/serviceWorker";
+import "./setup/proxy";
 
 Element.create();
 
