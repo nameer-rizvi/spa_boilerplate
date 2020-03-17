@@ -13,6 +13,6 @@ function proxy(ext) {
 
 export default () =>
   axios
-    .get(encodeURI(proxy()))
+    .get(proxy())
     .then(res => logti(`📟 ${res.data.welcome}`))
     .catch(err => logti(err));
