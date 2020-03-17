@@ -1,26 +1,19 @@
 import "react-app-polyfill/ie9";
-
 import React from "react";
+import Element from "./setup/element";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-
-import { store } from "./redux/store";
+import { store } from "./setup/store";
 import App from "./app/index";
+import * as serviceWorker from "./setup/serviceWorker";
 
-import * as serviceWorker from "./serviceWorker";
-
-const id = "root";
-const element = document.createElement("div");
-
-element.id = id;
-
-document.body.appendChild(element);
+Element.create();
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById(id)
+  Element.get()
 );
 
 serviceWorker.register();

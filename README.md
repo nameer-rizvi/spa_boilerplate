@@ -2,9 +2,17 @@
 
 [Express](https://expressjs.com/) server serving a [react](https://reactjs.org/) client via [webpack](https://webpack.js.org/) middleware.
 
-### 100% Control [THE HOT SAUCE]
+### Complete Harmony
 
-The app includes a [shared folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/develop/src/shared) that hosts anything (constants, functions, middleware, etc.) required in more than one file. This is the biggest advantage offered by this boilerplate. Unlike [create-react-app](https://github.com/facebook/create-react-app) or [gatsby](https://www.gatsbyjs.org/), the app doesn't require a dirty ejection to share things between the client and server ([Adam Laycock explains why ejecting can be 🆖](https://medium.com/curated-by-versett/dont-eject-your-create-react-app-b123c5247741)). Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
+With all three parts of the application hosted within the [/src folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/master/src), one can share anything between them. The project was built such that anything that is specific to a part is contained within its respective folder, while anything that might be shared between two or more parts is kept within the [shared folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/develop/src/shared). This may include anything such as constants, functions, middleware, etc.
+
+---
+
+---
+
+---
+
+This is the biggest advantage offered with spa_boilerplate. Unlike [create-react-app](https://github.com/facebook/create-react-app) or [gatsby](https://www.gatsbyjs.org/), the app doesn't require a dirty ejection to share things between the client and server ([Adam Laycock explains why ejecting can be 🆖](https://medium.com/curated-by-versett/dont-eject-your-create-react-app-b123c5247741)). Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
 There's already some settings included in the [shared index file](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/shared/index.js) to demonstrate this, such as a simple share of the app name between the [webpack html generator](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/webpack/common/html/index.js) and the [react header component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/header.js). Another example is the [consolidated path file](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/shared/path.js), so that if the directory for a file changes it’ll only have to be updated here, as opposed to wherever it is required in the client, server or webpack middleware.
 
@@ -111,9 +119,7 @@ _Recommended for viewing prod-version of app prior to deployment._
 ### React
 
 - Starters include:
-  - [header component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/header.js);
-  - [home page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/main/home/index.js);
-  - [404 page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/main/404.js);
+  - [page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/main/home/index.js);
   - [sass stylesheet](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/style.scss);
   - initial get function in [/home/axios.js](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/main/home/axios.js) to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint; and,
   - sample state/hook in [/home/index.js](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/main/home/index.js).

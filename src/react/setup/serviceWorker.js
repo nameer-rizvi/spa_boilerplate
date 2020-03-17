@@ -1,6 +1,6 @@
 import logti from "logti";
 
-import { isProd } from "../shared/index";
+import { isProd } from "../../shared/index";
 
 const inNavigator = "serviceWorker" in navigator;
 

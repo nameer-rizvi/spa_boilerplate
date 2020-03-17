@@ -1,4 +1,4 @@
-const shared = require("./src/shared/index").eslint;
+const settings = require("./src/shared/index").settings.eslint;
 
 module.exports = {
   env: {
@@ -25,7 +25,7 @@ module.exports = {
       version: "detect"
     }
   },
-  ...shared
+  ...settings
 };
 
 // Create react app's eslint config:

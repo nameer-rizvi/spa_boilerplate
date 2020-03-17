@@ -2,26 +2,23 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import { ConnectedRouter } from "connected-react-router";
 
-import { history } from "../redux/store";
+import { history } from "../setup/store";
 
-import Header from "./header";
-import HomePage from "./main/home/index";
-import NotFound from "./main/404";
+import Page from "./page";
 
 import "./style.scss";
 
 function App() {
   return (
     <ConnectedRouter history={history}>
-      <Header />
-      <main>
-        <Switch>
-          <Route exact path={"/"} component={HomePage} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
+      <Switch>
+        <Route exact path={"/"} component={Page} />
+      </Switch>
     </ConnectedRouter>
   );
 }
+
+// To render component on specific routes,
+// add component props: exact path={"/"}
 
 export default App;

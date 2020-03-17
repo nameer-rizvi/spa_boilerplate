@@ -1,20 +1,14 @@
 const merge = require("webpack-merge");
 
 const common = require("./common/index");
-const shared = require("../shared/index");
-
-const {
-  path: { toDist },
-  port: { client },
-  eslint
-} = shared;
+const { port, path, settings } = require("../shared/index");
 
 module.exports = merge(common(false), {
   mode: "development",
   devServer: {
-    port: client,
-    contentBase: toDist(),
-    historyApiFallback: { disableDotRule: true },
+    port: port.client,
+    contentBase: path.toDist(),
+    historyApiFallback: settings.historyApiFallback,
     hot: true,
     compress: true,
     stats: "minimal",
@@ -30,7 +24,7 @@ module.exports = merge(common(false), {
           loader: "eslint-loader",
           options: {
             cache: true,
-            ...eslint
+            ...settings.eslint
           }
         }
       }
@@ -41,9 +35,9 @@ module.exports = merge(common(false), {
 // If required to open devServer on a url
 // other than "/", add this to devServer :
 // openPage: "/search"
-
+//
 // Webpack's dev server documentation:
 // https://webpack.js.org/configuration/dev-server/
-
+//
 // Create-react-app's webpack dev server config:
 // https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/webpackDevServer.config.js

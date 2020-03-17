@@ -1,19 +1,14 @@
-const {
-  path: { toClient },
-  node_isProd
-} = require("../../shared/index");
-
+const shared = require("../../shared/index");
 const pluginsConfig = require("./plugins");
 const outputConfig = require("./output");
 const moduleConfig = require("./module");
 const optimization = require("./optimization");
 
 module.exports = wp_isProd => {
-  const isProd = node_isProd || wp_isProd;
-
+  const isProd = shared.isProd || wp_isProd;
   return {
     entry: {
-      app: toClient("/index.js")
+      app: shared.path.toClient("/index.js")
     },
     devtool: isProd ? "source-map" : "inline-source-map",
     externals: {
