@@ -1,16 +1,16 @@
-import { Element, store, serviceWorker } from "./setup/index";
+import { element, store, serviceWorker } from "./setup/index";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import App from "./app/index";
 
-Element.create();
+element.create();
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  Element.get()
+  element.get()
 );
 
 serviceWorker.register();
