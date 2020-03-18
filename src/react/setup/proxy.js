@@ -7,4 +7,4 @@ const url = origin.includes(`:${port.client}`)
   ? `${origin.replace(port.client, port.server)}${endpoint}`
   : `${origin}${endpoint}`;
 
-export default (axios.defaults.baseURL = url);
+axios.defaults.baseURL = url;

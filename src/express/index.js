@@ -19,6 +19,8 @@ app.use(
   })
 );
 
+app.use(express.json({ limit: "1mb" }));
+
 const logti = require("logti");
 const env = process.env.NODE_ENV;
 

@@ -1,12 +1,8 @@
-import "react-app-polyfill/ie9";
+import { Element, store, serviceWorker } from "./setup/index";
 import React from "react";
-import Element from "./setup/element";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { store } from "./setup/store";
 import App from "./app/index";
-import * as serviceWorker from "./setup/serviceWorker";
-import "./setup/proxy";
 
 Element.create();
 
