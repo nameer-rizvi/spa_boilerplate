@@ -1,38 +1,31 @@
-const path = require("path");
-const { name, description, theme_color } = require("./index");
-
-const faviconPath = path.resolve(__dirname, "favicon/favicon_io/favicon.ico");
+const {
+  name,
+  viewport,
+  author,
+  description,
+  keywords,
+  theme_color,
+  type,
+  url,
+  faviconPath
+  // twitterUsername
+} = require("./props");
 
 module.exports = {
   title: name,
   meta: {
-    viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-    author: "Nameer Rizvi",
+    viewport,
+    author,
     description,
-    keywords: [
-      "javascript",
-      "node",
-      "nodejs",
-      "express",
-      "expressjs",
-      "react",
-      "reactjs",
-      "webpack",
-      "webpack-middleware",
-      "boilerplate",
-      "boilerplate-template",
-      "boilerplate-application",
-      "single-page-application",
-      "spa"
-    ].join(", "),
+    keywords,
     "theme-color": theme_color,
-    "og:type": "website",
-    "og:url": "https://spa-boilerplate.herokuapp.com/",
+    "og:type": type,
+    "og:url": url,
     "od:site_name": name,
     "og:title": name,
     "og:description": description,
     "og:image": faviconPath
-    // "twitter:site": "@username"
+    // "twitter:site": twitterUsername
   },
   favicon: faviconPath
 };

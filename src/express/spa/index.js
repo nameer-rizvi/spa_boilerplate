@@ -1,14 +1,9 @@
-const shared = require("../../shared/index");
-
+const { isProd, path } = require("../../shared/index");
 const fs = require("fs");
-const htmlExists = fs.existsSync(shared.path.toHtml);
-
 const express = require("express");
-
-const path = require("path");
-const template = path.join(__dirname + "/template.html");
+const template = require("./template.js");
 
 module.exports =
-  shared.isProd && htmlExists
-    ? express.static(shared.path.toDist())
-    : (req, res) => res.status(404).sendFile(template);
+  isProd && fs.existsSync(path.toHtml)
+    ? express.static(path.toDist())
+    : (req, res) => res.status(404).send(template);

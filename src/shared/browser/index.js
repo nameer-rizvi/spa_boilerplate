@@ -1,6 +1,5 @@
-module.exports = {
-  name: "[app name]",
-  description: "Express server serving a react client via webpack middleware.",
-  theme_color: "#000",
-  background_color: "#fff"
-};
+const html = require("./html");
+const pwa = require("./pwa");
+const props = require("./props");
+
+module.exports = { html, pwa, props };

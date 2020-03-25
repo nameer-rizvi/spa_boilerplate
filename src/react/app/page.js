@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import { Github } from "styled-icons/icomoon/Github";
+import { Github } from "@styled-icons/boxicons-logos/Github";
 import logti from "logti";
 import { isProd } from "../../shared";
 

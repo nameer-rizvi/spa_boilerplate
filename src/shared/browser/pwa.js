@@ -1,16 +1,24 @@
-const icons = require("./favicon/index");
-
-const { name, description, theme_color, background_color } = require("./index");
-
-module.exports = {
+const {
+  start_url,
   name,
+  short_name,
   description,
   theme_color,
   background_color,
-  short_name: "[spa]",
-  start_url: "/",
-  display: "standalone",
-  orientation: "omit",
+  display,
+  orientation,
+  icons
+} = require("./props");
+
+module.exports = {
+  start_url,
+  name,
+  short_name,
+  description,
+  theme_color,
+  background_color,
+  display,
+  orientation,
   icons
 };
 

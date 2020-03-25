@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const { style } = require("../../shared/index").browser.props;
+
+module.exports = `<!DOCTYPE html>
 <html
   style="min-height: 100%;
     display: flex;
@@ -8,7 +10,11 @@
   <head>
     <title>[server]</title>
   </head>
-  <body style="max-width: 700px; padding: 40px">
+  <body
+    style="max-width: 700px;
+      padding: 40px;
+      ${style}"
+  >
     <h1>
       [404] Server can't GET through browser's window (via url) because the app
       is using the historyApiFallback module.
@@ -50,3 +56,4 @@
     >
   </body>
 </html>
+`;
