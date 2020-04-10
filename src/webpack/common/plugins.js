@@ -4,19 +4,19 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const { browser } = require("../../shared/index");
 
-module.exports = isProd => {
+module.exports = (isProd) => {
   return [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       ...browser.html,
       minify: isProd,
       hash: false,
-      cache: true
+      cache: true,
     }),
     new MiniCssExtractPlugin({
       filename: isProd ? "[name].[hash].css" : "[name].css",
-      chunkFilename: isProd ? "[id].[hash].css" : "[id].css"
-    })
+      chunkFilename: isProd ? "[id].[hash].css" : "[id].css",
+    }),
   ];
 };
 

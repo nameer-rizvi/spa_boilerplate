@@ -9,5 +9,5 @@ export default {
     element.style.cssText = browser.props.style;
     document.body.appendChild(element);
   },
-  get: () => document.getElementById(id)
+  get: () => document.getElementById(id),
 };

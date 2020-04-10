@@ -1,4 +1,4 @@
-const { style } = require("../../shared/index").browser.props;
+const { browser, port } = require("../../shared/index");
 
 module.exports = `<!DOCTYPE html>
 <html
@@ -13,7 +13,7 @@ module.exports = `<!DOCTYPE html>
   <body
     style="max-width: 700px;
       padding: 40px;
-      ${style}"
+      ${browser.props.style}"
   >
     <h1>
       [404] Server can't GET through browser's window (via url) because the app
@@ -51,7 +51,9 @@ module.exports = `<!DOCTYPE html>
     </p>
     <br />
     <br />
-    <a href="http://localhost:5001/" target="_blank" rel="noopener noreferrer"
+    <a href="http://localhost:${
+      port.client
+    }/" target="_blank" rel="noopener noreferrer"
       >Click here to open localhost on the client port.</a
     >
   </body>

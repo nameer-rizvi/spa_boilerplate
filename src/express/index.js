@@ -15,7 +15,7 @@ app.use(helmet());
 app.use(
   historyApiFallback({
     htmlAcceptHeaders: ["text/html", "application/xhtml+xml"],
-    ...settings.historyApiFallback
+    ...settings.historyApiFallback,
   })
 );
 

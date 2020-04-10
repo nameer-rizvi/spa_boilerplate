@@ -1,6 +1,6 @@
 const MiniCssExtractPluginLoader = require("mini-css-extract-plugin")["loader"];
 
-module.exports = isProd => {
+module.exports = (isProd) => {
   return {
     rules: [
       {
@@ -10,9 +10,9 @@ module.exports = isProd => {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env", "@babel/preset-react"],
-            plugins: ["@babel/plugin-proposal-class-properties"]
-          }
-        }
+            plugins: ["@babel/plugin-proposal-class-properties"],
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -20,29 +20,29 @@ module.exports = isProd => {
           {
             loader: MiniCssExtractPluginLoader,
             options: {
-              hmr: !isProd
-            }
+              hmr: !isProd,
+            },
           },
           "css-loader",
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: "file-loader"
+        use: "file-loader",
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: "file-loader"
+        use: "file-loader",
       },
       {
         test: /\.(csv|tsv)$/,
-        use: "csv-loader"
+        use: "csv-loader",
       },
       {
         test: /\.xml$/,
-        use: "xml-loader"
-      }
-    ]
+        use: "xml-loader",
+      },
+    ],
   };
 };

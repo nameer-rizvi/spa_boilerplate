@@ -12,7 +12,7 @@ module.exports = merge(common(false), {
     hot: true,
     compress: true,
     stats: "minimal",
-    clientLogLevel: "error"
+    clientLogLevel: "error",
   },
   module: {
     rules: [
@@ -24,12 +24,12 @@ module.exports = merge(common(false), {
           loader: "eslint-loader",
           options: {
             cache: true,
-            ...settings.eslint
-          }
-        }
-      }
-    ]
-  }
+            ...settings.eslint,
+          },
+        },
+      },
+    ],
+  },
 });
 
 // If required to open devServer on a url

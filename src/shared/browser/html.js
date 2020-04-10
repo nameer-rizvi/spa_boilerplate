@@ -7,7 +7,7 @@ const {
   theme_color,
   type,
   url,
-  faviconPath
+  faviconPath,
   // twitterUsername
 } = require("./props");
 
@@ -24,10 +24,10 @@ module.exports = {
     "od:site_name": name,
     "og:title": name,
     "og:description": description,
-    "og:image": faviconPath
+    "og:image": faviconPath,
     // "twitter:site": twitterUsername
   },
-  favicon: faviconPath
+  favicon: faviconPath,
 };
 
 // Html-webpack-plugin:

@@ -8,8 +8,8 @@ function Page() {
   useEffect(() => {
     axios
       .get()
-      .then(res => logti(`📟 ${res.data.welcome}`))
-      .catch(err => logti(err));
+      .then((res) => logti(`📟 ${res.data.welcome}`))
+      .catch((err) => logti(err));
   }, []);
 
   const [welcome] = useState(

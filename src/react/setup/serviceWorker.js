@@ -4,7 +4,7 @@ import { isProd } from "../../shared/index";
 
 const inNavigator = "serviceWorker" in navigator;
 
-const logStatus = status => logti(`👷 Service worker ${status}.`);
+const logStatus = (status) => logti(`👷 Service worker ${status}.`);
 
 export function register() {
   const isLocalhost = Boolean(
@@ -14,7 +14,6 @@ export function register() {
         /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
       )
   );
-
   isLocalhost
     ? logStatus("not enabled for localhost")
     : !isProd
@@ -31,7 +30,7 @@ export function register() {
 
 export function unregister() {
   inNavigator &&
-    (navigator.serviceWorker.ready.then(registration =>
+    (navigator.serviceWorker.ready.then((registration) =>
       registration.unregister()
     ),
     logStatus("successfully unregistered"));

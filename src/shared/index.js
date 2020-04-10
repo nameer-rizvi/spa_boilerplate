@@ -9,5 +9,5 @@ module.exports = {
   endpoint: "/api",
   browser,
   settings,
-  path
+  path,
 };

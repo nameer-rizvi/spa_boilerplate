@@ -24,7 +24,7 @@ module.exports = {
     "boilerplate-template",
     "boilerplate-application",
     "single-page-application",
-    "spa"
+    "spa",
   ].join(", "),
   theme_color: color,
   background_color: backgroundColor,
@@ -34,5 +34,5 @@ module.exports = {
   display: "standalone",
   orientation: "omit",
   faviconPath: icons[2].src,
-  icons
+  icons,
 };

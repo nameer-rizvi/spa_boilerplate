@@ -12,9 +12,9 @@ module.exports = merge(common(true), {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
-      exclude: [/asset-manifest\.json$/]
+      exclude: [/asset-manifest\.json$/],
     }),
     new ManifestPlugin({ fileName: "asset-manifest.json" }),
-    new WebpackPwaManifest(browser.pwa)
-  ]
+    new WebpackPwaManifest(browser.pwa),
+  ],
 });

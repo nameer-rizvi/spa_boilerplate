@@ -4,20 +4,20 @@ const outputConfig = require("./output");
 const moduleConfig = require("./module");
 const optimization = require("./optimization");
 
-module.exports = wp_isProd => {
+module.exports = (wp_isProd) => {
   const isProd = shared.isProd || wp_isProd;
   return {
     entry: {
-      app: shared.path.toClient("/index.js")
+      app: shared.path.toClient("/index.js"),
     },
     devtool: isProd ? "source-map" : "inline-source-map",
     externals: {
-      jsdom: "jsdom"
+      jsdom: "jsdom",
     },
     plugins: pluginsConfig(isProd),
     output: outputConfig(isProd),
     module: moduleConfig(isProd),
-    optimization
+    optimization,
   };
 };
 

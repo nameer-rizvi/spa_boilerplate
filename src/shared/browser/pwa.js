@@ -7,7 +7,7 @@ const {
   background_color,
   display,
   orientation,
-  icons
+  icons,
 } = require("./props");
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   background_color,
   display,
   orientation,
-  icons
+  icons,
 };
 
 // Google's manifest criteria:
