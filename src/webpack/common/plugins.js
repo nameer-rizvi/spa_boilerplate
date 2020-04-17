@@ -22,6 +22,6 @@ module.exports = (isProd) => {
 
 // If using moment.js:
 //   1. Import IgnorePlugin:
-//     const IgnorePlugin = require("webpack").IgnorePlugin;
+//     const { IgnorePlugin } = require("webpack");
 //   2. Add to return statement:
 //     new IgnorePlugin(/^\.\/locale$/, /moment$/)

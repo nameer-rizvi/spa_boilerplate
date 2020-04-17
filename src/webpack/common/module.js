@@ -1,4 +1,6 @@
-const MiniCssExtractPluginLoader = require("mini-css-extract-plugin")["loader"];
+const {
+  loader: MiniCssExtractPluginLoader,
+} = require("mini-css-extract-plugin");
 
 module.exports = (isProd) => {
   return {

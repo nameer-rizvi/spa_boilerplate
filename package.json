@@ -67,7 +67,7 @@
     "redux-promise-middleware": "^6.1.2",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.1.1",
+    "style-loader": "^1.1.4",
     "styled-components": "^4.4.1",
     "styled-icons": "^10.2.1",
     "webpack-cli": "^3.3.11",
