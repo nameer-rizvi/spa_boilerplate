@@ -1,4 +1,4 @@
-const { browser, port } = require("../../shared/index");
+const { browser, origin } = require("../../shared/index");
 
 module.exports = `<!DOCTYPE html>
 <html
@@ -10,11 +10,17 @@ module.exports = `<!DOCTYPE html>
   <head>
     <title>[server]</title>
   </head>
-  <body
-    style="max-width: 700px;
+  <style>
+    body {
+      max-width: 700px;
       padding: 40px;
-      ${browser.props.style}"
-  >
+      ${browser.props.style}
+    }
+    a {
+      color: ${browser.props.theme_color};
+    }
+  </style>
+  <body>
     <h1>
       [404] Server can't GET through browser's window (via url) because the app
       is using the historyApiFallback module.
@@ -51,10 +57,8 @@ module.exports = `<!DOCTYPE html>
     </p>
     <br />
     <br />
-    <a href="http://localhost:${
-      port.client
-    }/" target="_blank" rel="noopener noreferrer"
-      >Click here to open localhost on the client port.</a
+    <a href="${origin}" target="_blank" rel="noopener noreferrer"
+      >Click here to open the react application on the client port.</a
     >
   </body>
 </html>

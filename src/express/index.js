@@ -4,9 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const historyApiFallback = require("connect-history-api-fallback");
-const logti = require("logti");
 const { settings, endpoint, port } = require("../shared/index");
-const api = require("./routes/index");
+const { logti } = require("simpul");
+const api = require("./api");
 const spa = require("./spa/index");
 const env = process.env.NODE_ENV;
 

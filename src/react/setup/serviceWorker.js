@@ -1,4 +1,4 @@
-import logti from "logti";
+import { logti } from "simpul";
 
 import { isProd } from "../../shared/index";
 

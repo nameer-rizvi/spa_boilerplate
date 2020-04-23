@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import { Github } from "@styled-icons/boxicons-logos/Github";
-import logti from "logti";
+import { logti } from "simpul";
 import { isProd } from "../../shared";
 
 function Page() {
