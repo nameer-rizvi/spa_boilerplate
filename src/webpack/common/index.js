@@ -14,6 +14,9 @@ module.exports = (wp_isProd) => {
     externals: {
       jsdom: "jsdom",
     },
+    node: {
+      fs: "empty",
+    },
     plugins: pluginsConfig(isProd),
     output: outputConfig(isProd),
     module: moduleConfig(isProd),
