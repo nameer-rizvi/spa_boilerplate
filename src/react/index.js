@@ -2,7 +2,7 @@ import { element, store, serviceWorker } from "./setup/index";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import App from "./app/index";
+import App from "./App";
 
 element.create();
 
