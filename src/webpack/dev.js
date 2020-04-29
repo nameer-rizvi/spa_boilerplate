@@ -1,5 +1,4 @@
 const merge = require("webpack-merge");
-
 const common = require("./common/index");
 const { port, path, settings } = require("../shared/index");
 

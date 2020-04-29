@@ -1,14 +1,13 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { html } = require("../../shared/index").browser;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
-const { browser } = require("../../shared/index");
 
 module.exports = (isProd) => {
   return [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      ...browser.html,
+      ...html,
       minify: isProd,
       hash: false,
       cache: true,

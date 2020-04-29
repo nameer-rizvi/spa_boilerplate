@@ -1,5 +1,4 @@
 import { logti } from "simpul";
-
 import { isProd } from "../../shared/index";
 
 const inNavigator = "serviceWorker" in navigator;

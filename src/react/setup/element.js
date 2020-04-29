@@ -2,7 +2,7 @@ import { browser } from "../../shared/index";
 
 const id = "root";
 
-export default {
+const element = {
   create: () => {
     const element = document.createElement("div");
     element.id = id;
@@ -11,3 +11,5 @@ export default {
   },
   get: () => document.getElementById(id),
 };
+
+export default element;

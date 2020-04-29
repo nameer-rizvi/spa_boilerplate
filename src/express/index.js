@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
@@ -9,7 +8,6 @@ const { logti } = require("simpul");
 const api = require("./api");
 const spa = require("./spa/index");
 const env = process.env.NODE_ENV;
-
 const server = express();
 
 server.use(express.json({ limit: "1mb" }));
