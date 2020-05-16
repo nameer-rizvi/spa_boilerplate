@@ -1,4 +1,4 @@
-const shared = require("../../shared/index");
+const shared = require("../../shared");
 const pluginsConfig = require("./plugins");
 const outputConfig = require("./output");
 const moduleConfig = require("./module");

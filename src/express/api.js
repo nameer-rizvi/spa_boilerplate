@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { isProd } = require("../shared/index");
+const { isProd } = require("../shared");
 
 router.use((req, res) =>
   res.status(200).send({

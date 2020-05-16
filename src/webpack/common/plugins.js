@@ -1,6 +1,6 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { html } = require("../../shared/index").browser;
+const { html } = require("../../shared").browser;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (isProd) => {

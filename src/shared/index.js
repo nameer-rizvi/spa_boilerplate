@@ -1,5 +1,5 @@
 const server = require("./server");
-const browser = require("./browser/index");
+const browser = require("./browser");
 const settings = require("./settings");
 const path = require("./path");
 

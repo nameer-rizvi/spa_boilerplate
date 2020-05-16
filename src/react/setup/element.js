@@ -1,4 +1,4 @@
-import { browser } from "../../shared/index";
+import { browser } from "../../shared";
 
 const id = "root";
 

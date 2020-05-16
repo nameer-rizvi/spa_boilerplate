@@ -1,4 +1,4 @@
-const { isProd, path } = require("../../shared/index");
+const { isProd, path } = require("../../shared");
 const fs = require("fs");
 const express = require("express");
 const template = require("./template.js");

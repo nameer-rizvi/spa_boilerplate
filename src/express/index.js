@@ -3,10 +3,10 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const historyApiFallback = require("connect-history-api-fallback");
-const { settings, endpoint, port } = require("../shared/index");
+const { settings, endpoint, port } = require("../shared");
 const { logti } = require("simpul");
 const api = require("./api");
-const spa = require("./spa/index");
+const spa = require("./spa");
 const env = process.env.NODE_ENV;
 const server = express();
 

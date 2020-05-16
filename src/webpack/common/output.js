@@ -1,4 +1,4 @@
-const { toDist } = require("../../shared/index").path;
+const { toDist } = require("../../shared").path;
 
 module.exports = (isProd) => {
   return {

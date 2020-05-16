@@ -1,4 +1,4 @@
-const icons = require("./favicon/index");
+const icons = require("./favicon");
 const { color, backgroundColor, fontFamily } = require("./style");
 
 module.exports = {

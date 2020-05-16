@@ -1,6 +1,6 @@
 const merge = require("webpack-merge");
-const common = require("./common/index");
-const { port, path, settings } = require("../shared/index");
+const common = require("./common");
+const { port, path, settings } = require("../shared");
 
 module.exports = merge(common(false), {
   mode: "development",

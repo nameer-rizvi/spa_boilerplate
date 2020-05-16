@@ -1,9 +1,9 @@
 const merge = require("webpack-merge");
-const common = require("./common/index");
+const common = require("./common");
 const { GenerateSW } = require("workbox-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const { pwa } = require("../shared/index").browser;
+const { pwa } = require("../shared").browser;
 
 module.exports = merge(common(true), {
   mode: "production",

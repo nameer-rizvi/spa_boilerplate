@@ -1,4 +1,4 @@
-const { browser, origin } = require("../../shared/index");
+const { browser, origin } = require("../../shared");
 
 module.exports = `<!DOCTYPE html>
 <html

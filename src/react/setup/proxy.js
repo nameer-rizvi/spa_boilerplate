@@ -1,5 +1,5 @@
 import axios from "axios";
-import { port, endpoint } from "../../shared/index";
+import { port, endpoint } from "../../shared";
 
 const { origin } = window.location;
 
