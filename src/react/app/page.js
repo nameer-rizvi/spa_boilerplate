@@ -1,22 +1,22 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import { Github } from "@styled-icons/boxicons-logos/Github";
-import { logti } from "simpul";
+import { logger } from "simpul";
 import { isProd } from "../../shared";
 
 function Page() {
   useEffect(() => {
     axios
       .get()
-      .then((res) => logti(`📟 ${res.data.welcome}`))
-      .catch((err) => logti(err));
+      .then((res) => logger({ s: `📟 ${res.data.welcome}` }))
+      .catch((err) => logger(err));
   }, []);
 
   const [welcome] = useState(
     "🤓 This message has been fetched from react useState()."
   );
 
-  logti(welcome);
+  logger({ s: welcome });
 
   const link = (
     <a
