@@ -1,22 +1,20 @@
-import React, { Fragment, useState, useEffect } from "react";
-import axios from "axios";
-import { Github } from "@styled-icons/boxicons-logos/Github";
+import React, { useEffect, Fragment } from "react";
+import { port, endpoint } from "../../shared";
 import { logger } from "simpul";
+import { Github } from "@styled-icons/boxicons-logos/Github";
 import { isProd } from "../../shared";
 
 function Page() {
   useEffect(() => {
-    axios
-      .get()
-      .then((res) => logger({ s: `📟 ${res.data.welcome}` }))
-      .catch((err) => logger(err));
+    const { origin } = window.location;
+    const url = origin.includes(":" + port.client)
+      ? origin.replace(port.client, port.server) + endpoint
+      : origin + endpoint;
+    fetch(url)
+      .then((response) => response.json())
+      .then(logger)
+      .catch(logger);
   }, []);
-
-  const [welcome] = useState(
-    "🤓 This message has been fetched from react useState()."
-  );
-
-  logger({ s: welcome });
 
   const link = (
     <a

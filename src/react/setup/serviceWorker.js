@@ -3,7 +3,7 @@ import { isProd } from "../../shared";
 
 const inNavigator = "serviceWorker" in navigator;
 
-const logStatus = (status) => logger(`👷 Service worker ${status}.`);
+const logStatus = (status) => logger("👷 Service worker " + status + ".");
 
 export const register = () =>
   window.location.hostname === "localhost" ||

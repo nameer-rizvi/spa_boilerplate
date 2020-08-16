@@ -1,5 +1,5 @@
 module.exports = {
   color: "#eee",
   backgroundColor: "#35363a",
-  fontFamily: "system-ui, BlinkMacSystemFont, 'Roboto', arial, sans-serif",
+  fontFamily: "arial, serif, ui-serif, system-ui",
 };

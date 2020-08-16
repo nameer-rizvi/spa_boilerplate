@@ -29,7 +29,11 @@ module.exports = {
   theme_color: color,
   background_color: backgroundColor,
   fontFamily: fontFamily,
-  style: `color: ${color}; background-color: ${backgroundColor}; font-family: ${fontFamily};`,
+  style: [
+    "color: " + color,
+    "background-color: " + backgroundColor,
+    "font-family: " + fontFamily,
+  ].join("; "),
   viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
   display: "standalone",
   orientation: "omit",

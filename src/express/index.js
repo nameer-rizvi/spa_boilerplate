@@ -1,12 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+const { port, settings, origin, endpoint } = require("../shared");
+const { logger } = require("simpul");
 const cors = require("cors");
 const helmet = require("helmet");
 const historyApiFallback = require("connect-history-api-fallback");
-const { origin, settings, endpoint, port } = require("../shared");
-const { logger } = require("simpul");
 const api = require("./api");
 const spa = require("./spa");
+
 const server = express();
 
 server.listen(port.server, () =>

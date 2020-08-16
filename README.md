@@ -4,7 +4,7 @@
 
 ### Complete Harmony
 
-With all three parts of the application hosted within the [/src folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/master/src), one can share anything between them. The structure of the project is such that anything specific to a part can be contained within its respective folder while anything that might be shared between two or more parts can be kept within the [shared folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/develop/src/shared). This may include anything such as constants, functions, middleware, etc. Here, you can seamlessly do such things as share validations on both ends using a single file; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
+With all three parts of the application hosted within the [/src folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/master/src), one can share anything between them. The structure of the project is such that anything specific to a part can be contained within its respective folder while anything that might be shared between two or more parts can be kept within the [shared folder](https://github.com/nameer-rizvi/spa_boilerplate/tree/develop/src/shared). This may include anything such as constants, functions, middleware, etc. Here, you can seamlessly do such things as share validations between the back-end and front-end using a single module; which significantly decreases double-code and maintenance-headaches and increases dev-life satisfaction. This is especially helpful for apps that feature a circular flow via REST api's (aka. CRUD operations, forms, validations, etc.).
 
 ## Table of Contents
 
@@ -87,11 +87,11 @@ Start express production server using node.
 
 `npm run app`
 
-Start express server using node and serve static assets in /dist via index.html. NOTE: NODE_ENV must be set to production before running script to view app.
+Start express server using node and serve static assets in /dist via index.html.
 
 _Recommended for viewing prod-version of app prior to deployment._
 
-**If the cloud platform you choose to deploy with doesn't already read the 'build' and/or 'start' scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start". Also, don't forget to change or set the NODE_ENV to "production".**
+**If the cloud platform you choose to deploy with doesn't already read the 'build' and/or 'start' scripts, it is recommended you check the platform's documentations in order to learn how to run a "production" script that may go something like "npm i && npm run build && npm run start".**
 
 ## Features
 
@@ -102,16 +102,16 @@ _Recommended for viewing prod-version of app prior to deployment._
 
 **Please note that environment variables aren't accessible in the front-end, for security reasons. [Create-react-app](https://create-react-app.dev/docs/adding-custom-environment-variables/) does an excellent job of explaining why, but the gist of it is this:**
 
-> Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files.
+> Environment variables are embedded into the build, meaning anyone can view them by inspecting an app's files.
 
 **If, for any reason, environment variables are required in the front-end, two recommended alternatives are webpack's [Environment Plugin](https://webpack.js.org/plugins/environment-plugin/) or the third-party [DotenvPlugin (dotenv-webpack)](https://github.com/mrsteele/dotenv-webpack).**
 
 ### React
 
 - Starters include:
-  - [page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/page.js);
-  - [sass stylesheet](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/style.scss);
-  - initial [get function](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/proxy.js) in page.js to fetch data (via [axios](https://www.npmjs.com/package/axios)) from the api endpoint.
+  - [page component](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/App/Page.js);
+  - [theme provider](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/App/Theme.js);
+  - initial [get function](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/app/proxy.js) in Page.js to fetch data from the api endpoint.
 - Redux, with a [store](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/react/setup/store.js) setup that includes:
   - [history](https://www.npmjs.com/package/history) + [connected-react-router](https://github.com/supasate/connected-react-router) for SPA routing;
   - [redux-thunk](https://www.npmjs.com/package/redux-thunk) + [redux-promise](https://www.npmjs.com/package/redux-promise-middleware) for creating api middleware;

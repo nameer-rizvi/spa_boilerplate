@@ -1,11 +1,12 @@
-import { browser } from "../../shared";
+const id = "react-application";
 
-const id = "root";
+const html = document.getElementsByTagName("html")[0];
+html.setAttribute("lang", "en");
+html.setAttribute("dir", "ltr");
 
 const create = () => {
   const element = document.createElement("div");
   element.id = id;
-  element.style.fontFamily = browser.props.fontFamily;
   document.body.appendChild(element);
 };
 
