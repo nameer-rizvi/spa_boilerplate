@@ -1,11 +1,11 @@
-const server = require("./server");
 const browser = require("./browser");
-const settings = require("./settings");
 const path = require("./path");
+const server = require("./server");
+const settings = require("./settings");
 
 module.exports = {
-  ...server,
   browser,
-  settings,
   path,
+  ...server,
+  settings,
 };

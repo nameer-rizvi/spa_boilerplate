@@ -11,7 +11,7 @@ const spa = require("./spa");
 const server = express();
 
 server.listen(port.server, () =>
-  logger({ s: `express server listening on port ${port.server}.` })
+  logger({ s: "Express server listening on port " + port.server + "." })
 );
 
 const historyApiFallbackSettings = {
@@ -19,9 +19,13 @@ const historyApiFallbackSettings = {
   ...settings.historyApiFallback,
 };
 
-server.use(express.json({ limit: "1mb" }));
-server.use(cors({ origin }));
-server.use(helmet());
-server.use(historyApiFallback(historyApiFallbackSettings));
+server.use(
+  express.json({ limit: "1mb" }),
+  cors({ origin }),
+  helmet(),
+  historyApiFallback(historyApiFallbackSettings)
+);
+
 server.use(endpoint, api);
+
 server.use(spa);

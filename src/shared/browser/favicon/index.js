@@ -1,6 +1,6 @@
 const path = require("path");
 
-const pathResolve = (dir) => path.resolve(__dirname, `favicon_io/${dir}`);
+const pathResolve = (dir) => path.resolve(__dirname, "favicon_io/" + dir);
 
 module.exports = [
   {
