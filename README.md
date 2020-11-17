@@ -134,7 +134,7 @@ _Recommended for viewing prod-version of app prior to deployment._
   - Stylesheets: css, scss, sass;
   - Images: png, svg, jpg, gif;
   - Fonts: woff, woff2, eot, ttf, otf; and,
-  - Data: json, csv, tsv, xml.
+  - Data: json.
 - [Dev server](https://github.com/nameer-rizvi/spa_boilerplate/blob/develop/src/webpack/dev.js) with the following settings:
   - [historyApiFallback](https://webpack.js.org/configuration/dev-server/#devserverhistoryapifallback) to allow SPA routing;
   - [hot reloading](https://webpack.js.org/configuration/dev-server/#devserverhot),

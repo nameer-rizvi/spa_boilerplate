@@ -1,6 +1,6 @@
 const MiniCssExtractPluginLoader = require("mini-css-extract-plugin").loader;
 
-module.exports = (isProd) => ({
+module.exports = (isProduction) => ({
   rules: [
     {
       test: /\.(js|jsx)$/,
@@ -19,7 +19,7 @@ module.exports = (isProd) => ({
         {
           loader: MiniCssExtractPluginLoader,
           options: {
-            hmr: !isProd,
+            hmr: !isProduction,
           },
         },
         "css-loader",

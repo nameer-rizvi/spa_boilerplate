@@ -1,5 +1,5 @@
 import { logger } from "simpul";
-import { isProd } from "../../shared";
+import { isProduction } from "../../shared";
 
 const inNavigator = "serviceWorker" in navigator;
 
@@ -12,7 +12,7 @@ export const register = () =>
     /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
   )
     ? logStatus("not enabled for localhost")
-    : !isProd
+    : !isProduction
     ? logStatus("only enabled for production")
     : !inNavigator
     ? logStatus("not in navigator")

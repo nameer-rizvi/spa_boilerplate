@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { isProd } = require("../shared");
+const { isProduction } = require("../../shared");
 
 router.use((req, res) =>
   res.status(200).send({
     welcome:
       "📟 This has been fetched from the express server via fetch, using the /api endpoint." +
-      (!isProd ? " You can find me at /src/express/api.js." : ""),
+      (!isProduction ? " You can find me at /src/express/api.js." : ""),
   })
 );
 

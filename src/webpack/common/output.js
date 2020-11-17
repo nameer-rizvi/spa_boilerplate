@@ -1,7 +1,7 @@
 const { toDist } = require("../../shared").path;
 
-module.exports = (isProd) => ({
+module.exports = (isProduction) => ({
   path: toDist(),
   publicPath: "/",
-  filename: isProd ? "[name].[contenthash].js" : "[name].bundle.js",
+  filename: isProduction ? "[name].[contenthash].js" : "[name].bundle.js",
 });

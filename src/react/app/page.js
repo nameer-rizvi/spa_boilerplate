@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from "react";
 import { port, endpoint } from "../../shared";
 import { logger } from "simpul";
 import { Github } from "@styled-icons/boxicons-logos/Github";
-import { isProd } from "../../shared";
+import { isProduction } from "../../shared";
 
 function Page() {
   useEffect(() => {
@@ -27,7 +27,7 @@ function Page() {
     </a>
   );
 
-  return isProd ? (
+  return isProduction ? (
     <Fragment>
       <h1>Well, would ya look at this?</h1>
       <h2>The app is in production.</h2>

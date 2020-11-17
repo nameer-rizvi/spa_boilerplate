@@ -1,12 +1,8 @@
 require("dotenv").config();
 const express = require("express");
-const { port, settings, origin, endpoint } = require("../shared");
+const { port, endpoint } = require("../shared");
 const { logger } = require("simpul");
-const cors = require("cors");
-const helmet = require("helmet");
-const historyApiFallback = require("connect-history-api-fallback");
-const api = require("./api");
-const spa = require("./spa");
+const middlewares = require("./middlewares");
 
 const server = express();
 
@@ -14,18 +10,8 @@ server.listen(port.server, () =>
   logger({ s: "Express server listening on port " + port.server + "." })
 );
 
-const historyApiFallbackSettings = {
-  htmlAcceptHeaders: ["text/html", "application/xhtml+xml"],
-  ...settings.historyApiFallback,
-};
+server.use(middlewares.application);
 
-server.use(
-  express.json({ limit: "1mb" }),
-  cors({ origin }),
-  helmet(),
-  historyApiFallback(historyApiFallbackSettings)
-);
+server.use(endpoint, middlewares.api);
 
-server.use(endpoint, api);
-
-server.use(spa);
+server.use(middlewares.singlePageApplication);
